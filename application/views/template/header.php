@@ -4,8 +4,20 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <?php 
 $ktgproduk =  $this->db->get_where('m_ktgproduk', array('aktif' => '1'), 6)->result();
+$logo =  $this->db->get_where('t_config_image', array('tipe' => 'logo'))->row();
 
  ?>
+
+<style type="text/css">
+	.img-md {
+		max-width: 100%;
+    	max-height: 100%;
+	}
+	.img-news {
+		width: 100%;
+    	max-height: 150px;
+	}
+</style>
 <head>
 
 	<!-- Basic Page Needs -->
@@ -37,7 +49,7 @@ $ktgproduk =  $this->db->get_where('m_ktgproduk', array('aktif' => '1'), 6)->res
 <div id="wrap" class="grid_1200">
 	<header id="header">
 		<div class="container clearfix">
-			<div class="logo"><a href="index.html"><img alt="" src="assets/images/logo.png"></a></div>
+			<div class="logo"><a href="<?php echo base_url() ?>"><img alt="" src="custompanel/<?php echo $logo->image ?>"></a></div>
 			<nav class="navigation navbar-fixed-top"> 
 				<ul>
 					<li class="home"><a href="<?php echo base_url() ?>">Home</a></li>

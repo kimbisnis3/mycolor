@@ -1,13 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Elementgambar extends CI_Controller {
+class About extends CI_Controller {
     
     public $table       = 't_config_image';
-    public $judul       = 'Elementgambar';
-    public $aktifgrup   = 'master';
-    public $aktifmenu   = 'elementgambar';
-    public $foldername  = 'elementgambar';
-    public $indexpage   = 'elementgambar/v_elementgambar';
+    public $judul       = 'Tentang Kami';
+    public $aktifgrup   = 'about';
+    public $aktifmenu   = 'about';
+    public $foldername  = 'about';
+    public $indexpage   = 'about/v_about';
     function __construct() {
         parent::__construct();
         include(APPPATH.'libraries/sessionakses.php');
@@ -22,7 +22,7 @@ class Elementgambar extends CI_Controller {
     }
 
     public function setView(){
-        $w['status']  = "1";
+        $w['tipe']  = "tk";
         $result     = $this->Unimodel->getdatawall($this->table,$w);
         $list       = array();
         $no         = 1;
@@ -38,7 +38,6 @@ class Elementgambar extends CI_Controller {
                         "judul"     => $r->judul,
                         "image"     => $gambar,
                         "ket"       => $r->ket,
-                        "aktif"     => aktif($r->aktif),
                         "action"    => btnu($r->id)
                         
             );
@@ -48,33 +47,7 @@ class Elementgambar extends CI_Controller {
         echo json_encode(array('data' => $list));
     }
 
-    public function tambahfile()
-    {   
-        $config['upload_path'] = './uploads/'.$this->foldername;
-        if (!is_dir($config['upload_path'])) {
-            mkdir($config['upload_path'], 0777, TRUE);
-        }
-        $config['allowed_types'] = '*';
-        $config['file_name'] = slug($this->input->post('judul'));
-        $path = substr($config['upload_path'],1);
-        $this->upload->initialize($config);
-        
-        if ( ! $this->upload->do_upload('image')){
-            $d['useri']     = $this->session->userdata('username');
-            $d['judul']     = $this->input->post('judul');
-            $d['ket']       = $this->input->post('ket');
-            $insert = $this->Unimodel->save($this->table,$d);
-        }else{
-            $d['useri']     = $this->session->userdata('username');
-            $d['judul']     = $this->input->post('judul');
-            $d['ket']       = $this->input->post('ket');
-            $d['image']    = $path.'/'.$this->upload->data('file_name');
-           
-            $insert = $this->Unimodel->save($this->table,$d);
-        }
-        $r['sukses'] = ($insert > 0) ? 'success' : 'fail' ;
-        echo json_encode($r);
-    }
+    
 
     public function edit()
     {
@@ -131,20 +104,6 @@ class Elementgambar extends CI_Controller {
         $w['id'] = $this->input->post('id');
         $delete = $this->Unimodel->delete($this->table,$w);
         $r['sukses'] = ($delete > 0) ? 'success' : 'fail' ;
-        echo json_encode($r);
-    }
-
-    public function aktif()
-    {
-        $sql = "SELECT aktif FROM {$this->table} WHERE id = {$this->input->post('id')}";
-        $s = $this->db->query($sql)->row()->aktif;
-
-        $s == 1 ? $status = 0 : $status =1;
-
-        $d['aktif'] = $status;
-        $w['id'] = $this->input->post('id');   
-        $update = $this->Unimodel->update($this->table,$d,$w);
-        $r['sukses'] = ($update > 0) ? 'success' : 'fail' ;
         echo json_encode($r);
     }
     

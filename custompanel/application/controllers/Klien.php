@@ -1,13 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Elementgambar extends CI_Controller {
+class Klien extends CI_Controller {
     
     public $table       = 't_config_image';
-    public $judul       = 'Elementgambar';
+    public $judul       = 'Klien';
     public $aktifgrup   = 'master';
-    public $aktifmenu   = 'elementgambar';
-    public $foldername  = 'elementgambar';
-    public $indexpage   = 'elementgambar/v_elementgambar';
+    public $aktifmenu   = 'klien';
+    public $foldername  = 'klien';
+    public $indexpage   = 'klien/v_klien';
     function __construct() {
         parent::__construct();
         include(APPPATH.'libraries/sessionakses.php');
@@ -22,7 +22,7 @@ class Elementgambar extends CI_Controller {
     }
 
     public function setView(){
-        $w['status']  = "1";
+        $w['tipe']  = "cl";
         $result     = $this->Unimodel->getdatawall($this->table,$w);
         $list       = array();
         $no         = 1;
@@ -37,9 +37,8 @@ class Elementgambar extends CI_Controller {
                         "kode"      => $r->kode,
                         "judul"     => $r->judul,
                         "image"     => $gambar,
-                        "ket"       => $r->ket,
-                        "aktif"     => aktif($r->aktif),
-                        "action"    => btnu($r->id)
+                        "link"      => $r->link,
+                        "action"    => btnud($r->id)
                         
             );
             $list[] = $row;
@@ -62,12 +61,14 @@ class Elementgambar extends CI_Controller {
         if ( ! $this->upload->do_upload('image')){
             $d['useri']     = $this->session->userdata('username');
             $d['judul']     = $this->input->post('judul');
-            $d['ket']       = $this->input->post('ket');
+            $d['link']      = $this->input->post('link');
+            $d['tipe']      = 'cl';
             $insert = $this->Unimodel->save($this->table,$d);
         }else{
             $d['useri']     = $this->session->userdata('username');
             $d['judul']     = $this->input->post('judul');
-            $d['ket']       = $this->input->post('ket');
+            $d['link']      = $this->input->post('link');
+            $d['tipe']      = 'cl';
             $d['image']    = $path.'/'.$this->upload->data('file_name');
            
             $insert = $this->Unimodel->save($this->table,$d);
@@ -101,7 +102,8 @@ class Elementgambar extends CI_Controller {
                 $d['useru']     = $this->session->userdata('username');
 
                 $d['judul']     = $this->input->post('judul');
-                $d['ket']       = $this->input->post('ket');
+                $d['link']      = $this->input->post('link');
+                $d['tipe']      = 'cl';
                 $d['image']     = $path.'/'.$this->upload->data('file_name').'.'.$ext ;
 
                 $w['id'] = $this->input->post('id');
@@ -110,7 +112,8 @@ class Elementgambar extends CI_Controller {
                 @unlink("$pathfile");
                 $d['useru']     = $this->session->userdata('username');
                 $d['judul']     = $this->input->post('judul');
-                $d['ket']       = $this->input->post('ket');
+                $d['link']      = $this->input->post('link');
+                $d['tipe']      = 'cl';
                 $d['image']     = $path.'/'.$this->upload->data('file_name');
 
                 $w['id'] = $this->input->post('id');
@@ -131,20 +134,6 @@ class Elementgambar extends CI_Controller {
         $w['id'] = $this->input->post('id');
         $delete = $this->Unimodel->delete($this->table,$w);
         $r['sukses'] = ($delete > 0) ? 'success' : 'fail' ;
-        echo json_encode($r);
-    }
-
-    public function aktif()
-    {
-        $sql = "SELECT aktif FROM {$this->table} WHERE id = {$this->input->post('id')}";
-        $s = $this->db->query($sql)->row()->aktif;
-
-        $s == 1 ? $status = 0 : $status =1;
-
-        $d['aktif'] = $status;
-        $w['id'] = $this->input->post('id');   
-        $update = $this->Unimodel->update($this->table,$d,$w);
-        $r['sukses'] = ($update > 0) ? 'success' : 'fail' ;
         echo json_encode($r);
     }
     

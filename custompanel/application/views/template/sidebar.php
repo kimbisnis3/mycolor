@@ -19,9 +19,9 @@
           <i class="fa fa-newspaper-o"></i> <span>Berita</span>
         </a>
       </li>
-      <li class="treeview profil">
-        <a href="<?php echo site_url('profil'); ?>">
-          <i class="fa fa-user"></i> <span>Profil</span>
+      <li class="treeview about">
+        <a href="<?php echo site_url('about'); ?>">
+          <i class="fa fa-user"></i> <span>Tetang Kami</span>
         </a>
       </li>
       <li class="treeview ktgproduk">
@@ -65,6 +65,11 @@
         <ul class="treeview-menu">
           <li class="elementteks">
             <a href="<?php echo base_url('elementteks'); ?>"><i class="fa fa-circle-o"></i> Element Teks</a>
+          </li>
+        </ul>
+        <ul class="treeview-menu">
+          <li class="klien">
+            <a href="<?php echo base_url('klien'); ?>"><i class="fa fa-circle-o"></i> Klien</a>
           </li>
         </ul>
         <ul class="treeview-menu">

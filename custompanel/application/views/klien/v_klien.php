@@ -36,8 +36,8 @@ $this->load->view('template/sidebar');
                   <input type="file" class="form-control" name="image" id="image" >
                 </div>
                 <div class="form-group">
-                  <label>Keterangan</label>
-                  <input type="text" class="form-control" name="ket" readonly="true">
+                  <label>Link</label>
+                  <input type="text" class="form-control" name="link" >
                 </div>
                 <div class="form-group">
                   <input type="hidden" name="path" id="path">
@@ -74,7 +74,7 @@ $this->load->view('template/sidebar');
         <div class="box box-info">
           <div class="box-header">
             <button class="btn btn-success btn-flat" onclick="refresh()"  title="Cek Data"><i class="glyphicon glyphicon-refresh"></i> Refresh</button>
-            <!-- <button class="btn btn-warning btn-flat" onclick="add_data()" ><i class="fa fa-plus"></i> Tambah</button> -->
+            <button class="btn btn-warning btn-flat" onclick="add_data()" ><i class="fa fa-plus"></i> Tambah</button>
           </div>
           <div class="box-body">
             <div class="table-responsive mailbox-messages">
@@ -84,8 +84,7 @@ $this->load->view('template/sidebar');
                     <th>No</th>
                     <th>Judul</th>
                     <th>Image</th>
-                    <th>Keterangan</th>
-                    <th>Status</th>
+                    <th>Link</th>
                     <th>Opsi</th>
                   </tr>
                 </thead>
@@ -104,7 +103,7 @@ $this->load->view('template/sidebar');
   $this->load->view('template/js');
   ?>
   <script type="text/javascript">
-  var controller = 'elementgambar';
+  var controller = 'klien';
   var table;
   var idx = -1;
   var urlmaindata = "<?php echo site_url('') ?>" + controller + '/setView';
@@ -135,11 +134,8 @@ $this->load->view('template/sidebar');
                   "data": "image"
               }, 
               {
-                  "data": "ket"
-              }, 
-              {
-                  "data": "aktif"
-              }, 
+                  "data": "link"
+              },
               {
                   "data": "action"
               }

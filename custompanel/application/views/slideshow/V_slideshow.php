@@ -85,6 +85,7 @@ $this->load->view('template/sidebar');
                     <th>Judul</th>
                     <th>Image</th>
                     <th>Keterangan</th>
+                    <th>Status</th>
                     <th>Opsi</th>
                   </tr>
                 </thead>
@@ -135,6 +136,9 @@ $this->load->view('template/sidebar');
               }, 
               {
                   "data": "ket"
+              }, 
+              {
+                  "data": "aktif"
               }, 
               {
                   "data": "action"

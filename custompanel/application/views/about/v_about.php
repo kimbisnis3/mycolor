@@ -36,8 +36,16 @@ $this->load->view('template/sidebar');
                   <input type="file" class="form-control" name="image" id="image" >
                 </div>
                 <div class="form-group">
+                  <label>Artikel</label>
+                  <textarea class="form-control" rows="7" name="artikelx" id="artikelx"></textarea>
+                </div>
+                <div class="form-group" style="display : none;">
+                  <label>Artikel</label>
+                  <textarea class="form-control" rows="7" name="artikel" id="artikel"></textarea>
+                </div>
+                <div class="form-group">
                   <label>Keterangan</label>
-                  <input type="text" class="form-control" name="ket" readonly="true">
+                  <input type="text" class="form-control" name="ket" >
                 </div>
                 <div class="form-group">
                   <input type="hidden" name="path" id="path">
@@ -85,7 +93,6 @@ $this->load->view('template/sidebar');
                     <th>Judul</th>
                     <th>Image</th>
                     <th>Keterangan</th>
-                    <th>Status</th>
                     <th>Opsi</th>
                   </tr>
                 </thead>
@@ -104,7 +111,7 @@ $this->load->view('template/sidebar');
   $this->load->view('template/js');
   ?>
   <script type="text/javascript">
-  var controller = 'elementgambar';
+  var controller = 'about';
   var table;
   var idx = -1;
   var urlmaindata = "<?php echo site_url('') ?>" + controller + '/setView';
@@ -136,10 +143,7 @@ $this->load->view('template/sidebar');
               }, 
               {
                   "data": "ket"
-              }, 
-              {
-                  "data": "aktif"
-              }, 
+              },
               {
                   "data": "action"
               }
@@ -156,6 +160,7 @@ $this->load->view('template/sidebar');
   function add_data() {
       save_method = 'add';
       $('#form-data')[0].reset();
+      CKEDITOR.instances.artikelx.setData('');
 
       $('#modal-data').modal('show');
       $('.modal-title').text('Tambahkan Data');
@@ -176,6 +181,7 @@ $this->load->view('template/sidebar');
               $('[name="judul"]').val(data.judul);
               $('[name="ket"]').val(data.ket);
               $('[name="path"]').val('.' + data.image);
+              CKEDITOR.instances.artikelx.setData(data.artikel);
               
               $('#modal-data').modal('show');
               $('.modal-title').text('Edit Data');
@@ -187,8 +193,45 @@ $this->load->view('template/sidebar');
       });
   }
 
+  function save() {
+      var url;
+      artikel = CKEDITOR.instances['artikelx'].getData();
+      $('#artikel').val(artikel);
+      if (save_method == 'add') {
+          url = urlsave;
+          notif = showNotif('Sukses', 'Data Berhasil Ditambahkan', 'success');
+      } else {
+          url = urlupdate;
+          notif = showNotif('Sukses', 'Data Berhasil Diubah', 'success');
+      }
+      $.ajax({
+          url: url,
+          type: "POST",
+          data: $('#form-data').serialize(),
+          dataType: "JSON",
+          success: function(data) {
+              if (data.sukses == 'success') {
+                  $('#modal-data').modal('hide');
+                  refresh();
+                  save_method == 'add' ? showNotif('Sukses', 'Data Berhasil Ditambahkan', 'success') : showNotif('Sukses', 'Data Berhasil Diubah', 'success')
+              } else if (data.sukses == 'fail') {
+                  $('#modal-data').modal('hide');
+                  refresh();
+                  showNotif('Sukses', 'Tidak Ada Perubahan', 'success')
+              }
+
+
+          },
+          error: function(jqXHR, textStatus, errorThrown) {
+              alert('Error on process');
+          }
+      });
+  }
+
   function savefile() {
       var url;
+      artikel = CKEDITOR.instances['artikelx'].getData();
+      $('#artikel').val(artikel);
       if (save_method == 'add') {
           url = urlsavefile;
       } else {

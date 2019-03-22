@@ -22,7 +22,8 @@ class Elementteks extends CI_Controller {
     }
 
     public function setView(){
-        $result     = $this->Unimodel->getdata($this->table);
+        $w = array('status' => '1', );
+        $result     = $this->Unimodel->getdatawall($this->table,$w);
         $list       = array();
         $no         = 1;
         foreach ($result as $r) {
@@ -32,7 +33,7 @@ class Elementteks extends CI_Controller {
                         "judul"     => $r->judul,
                         "teks"      => $r->teks,
                         "ket"       => $r->ket,
-                        "action"    => btnud($r->id)
+                        "action"    => btnu($r->id)
                         
             );
             $list[] = $row;
@@ -47,7 +48,6 @@ class Elementteks extends CI_Controller {
         $d['judul']     = $this->input->post('judul');
         $d['teks']      = $this->input->post('teks');
         $d['ket']       = $this->input->post('ket');
-        $d['slug']      = slug($this->input->post('judul'));
 
         $insert = $this->Unimodel->save($this->table,$d);
 
@@ -68,7 +68,6 @@ class Elementteks extends CI_Controller {
         $d['judul']     = $this->input->post('judul');
         $d['teks']      = $this->input->post('teks');
         $d['ket']       = $this->input->post('ket');
-        $d['slug']      = slug($this->input->post('judul'));
 
         $w['id'] = $this->input->post('id');
         $update = $this->Unimodel->update($this->table,$d,$w);

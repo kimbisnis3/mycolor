@@ -63,12 +63,14 @@ class Slideshow extends CI_Controller {
             $d['useri']     = $this->session->userdata('username');
             $d['judul']     = $this->input->post('judul');
             $d['tipe']      = "ss";
+            $d['status']    = "3";
             $d['ket']       = $this->input->post('ket');
             $insert = $this->Unimodel->save($this->table,$d);
         }else{
             $d['useri']     = $this->session->userdata('username');
             $d['judul']     = $this->input->post('judul');
             $d['tipe']      = "ss";
+            $d['status']    = "3";
             $d['ket']       = $this->input->post('ket');
             $d['image']    = $path.'/'.$this->upload->data('file_name');
            
@@ -104,6 +106,7 @@ class Slideshow extends CI_Controller {
 
                 $d['judul']     = $this->input->post('judul');
                 $d['tipe']      = "ss";
+                $d['status']    = "3";
                 $d['ket']       = $this->input->post('ket');
                 $d['image']     = $path.'/'.$this->upload->data('file_name').'.'.$ext ;
 
@@ -114,6 +117,7 @@ class Slideshow extends CI_Controller {
                 $d['useru']     = $this->session->userdata('username');
                 $d['judul']     = $this->input->post('judul');
                 $d['tipe']      = "ss";
+                $d['status']    = "3";
                 $d['ket']       = $this->input->post('ket');
                 $d['image']     = $path.'/'.$this->upload->data('file_name');
 

@@ -1,5 +1,11 @@
 <?php 
 $tk =  $this->db->get_where('t_config_text', array('tipe' => 'tk'), 6)->row();
+$alfoot =  $this->db->get_where('t_config_text', array('tipe' => 'alfoot'), 6)->row();
+$tlfoot =  $this->db->get_where('t_config_text', array('tipe' => 'tlfoot'), 6)->row();
+$efoot =  $this->db->get_where('t_config_text', array('tipe' => 'efoot'), 6)->row();
+
+$fb =  $this->db->get_where('t_config_text', array('tipe' => 'logo_fb'), 6)->row();
+$ig =  $this->db->get_where('t_config_text', array('tipe' => 'logo_ig'), 6)->row();
 
  ?>
   <footer id="footer">
@@ -20,15 +26,15 @@ $tk =  $this->db->get_where('t_config_text', array('tipe' => 'tk'), 6)->row();
               <ul>
                 <li>
                   <i class="fa fa-map-marker"></i>
-                  <div>Jalan Merak Raya Blok C No.28, Dusun I, Langenharjo, Grogol, Kabupaten Sukoharjo, Jawa Tengah 57552</div>
+                  <div><?php echo $alfoot->teks; ?></div>
                 </li>
                 <li>
                   <i class="fa fa-phone"></i>
-                  <div>(0271) 9221000</div>
+                  <div><?php echo $tlfoot->teks; ?></div>
                 </li>
                 <li>
                   <i class="fa fa-envelope"></i>
-                  <div>info@mycolour.com</div>
+                  <div><?php echo $efoot->teks; ?></div>
                 </li>
               </ul>
             </div>
@@ -55,9 +61,9 @@ $tk =  $this->db->get_where('t_config_text', array('tipe' => 'tk'), 6)->row();
             <div class="widget-about">
               <div class="social-ul">
                 <ul>
-                  <li class="social-facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li class="social-instagram"><a href="#"><i class="fa fa-instagram"></i></a></li>
-                  <li class="social-whatsapp"><a href="#"><i class="fa fa-whatsapp-square"></i></a></li>
+                  <li class="social-facebook"><a href="<?php echo prep_url($fb->teks); ?>"><i class="fa fa-facebook"></i></a></li>
+                  <li class="social-instagram"><a href="<?php echo prep_url($ig->teks); ?>"><i class="fa fa-instagram"></i></a></li>
+                  <!-- <li class="social-whatsapp"><a href="#"><i class="fa fa-whatsapp-square"></i></a></li> -->
                 </ul>
               </div>
             </div>

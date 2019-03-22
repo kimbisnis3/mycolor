@@ -29,7 +29,7 @@ $this->load->view('template/sidebar');
                 <div class="form-group">
                   <label>Judul</label>
                   <input type="hidden" name="id">
-                  <input type="text" class="form-control" name="judul">
+                  <input type="text" class="form-control" name="judul" >
                 </div>
                 <div class="form-group">
                   <label>Teks</label>
@@ -37,7 +37,7 @@ $this->load->view('template/sidebar');
                 </div>
                 <div class="form-group">
                   <label>Keterangan</label>
-                  <input type="text" class="form-control" name="ket" >
+                  <input type="text" class="form-control" name="ket" readonly="true">
                 </div>
               </div>
             </div>
@@ -46,7 +46,7 @@ $this->load->view('template/sidebar');
       </form>
       <div class="modal-footer">
         <button type="button" class="btn btn-warning btn-flat" data-dismiss="modal">Batal</button>
-        <button type="button" id="btnSave" onclick="savefile()" class="btn btn-primary btn-flat">Simpan</button>
+        <button type="button" id="btnSave" onclick="save()" class="btn btn-primary btn-flat">Simpan</button>
       </div>
     </div>
   </div>
@@ -77,7 +77,7 @@ $this->load->view('template/sidebar');
             <div class="table-responsive mailbox-messages">
               <table id="table" class="table table-striped table-bordered" cellspacing="0" width="100%">
                 <thead>
-                  <tr id="repeat">
+                  <tr>
                     <th>No</th>
                     <th>Judul</th>
                     <th>Teks</th>
@@ -100,7 +100,7 @@ $this->load->view('template/sidebar');
   $this->load->view('template/js');
   ?>
   <script type="text/javascript">
-  var controller = 'elementgambar';
+  var controller = 'elementteks';
   var table;
   var idx = -1;
   var urlmaindata = "<?php echo site_url('') ?>" + controller + '/setView';
@@ -128,7 +128,7 @@ $this->load->view('template/sidebar');
                   "data": "judul"
               },
               {
-                  "data": "text"
+                  "data": "teks"
               }, 
               {
                   "data": "ket"
@@ -172,6 +172,37 @@ $this->load->view('template/sidebar');
               
               $('#modal-data').modal('show');
               $('.modal-title').text('Edit Data');
+
+          },
+          error: function(jqXHR, textStatus, errorThrown) {
+              alert('Error on process');
+          }
+      });
+  }
+
+  function save() {
+      var url;
+      if (save_method == 'add') {
+          url = urlsave;
+      } else {
+          url = urlupdate;
+      }
+      $.ajax({
+          url: url,
+          type: "POST",
+          data: $('#form-data').serialize(),
+          dataType: "JSON",
+          success: function(data) {
+              if (data.sukses == 'success') {
+                  $('#modal-data').modal('hide');
+                  refresh();
+                  save_method == 'add' ? showNotif('Sukses', 'Data Berhasil Ditambahkan', 'success') : showNotif('Sukses', 'Data Berhasil Diubah', 'success')
+              } else if (data.sukses == 'fail') {
+                  $('#modal-data').modal('hide');
+                  refresh();
+                  showNotif('Sukses', 'Tidak Ada Perubahan', 'success')
+              }
+
 
           },
           error: function(jqXHR, textStatus, errorThrown) {
