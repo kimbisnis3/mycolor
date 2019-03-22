@@ -75,7 +75,7 @@ $ig =  $this->db->get_where('t_config_text', array('tipe' => 'logo_ig'), 6)->row
   <footer id="footer-bottom">
     <div class="container">
       <div class="copyrights">Copyright <script type="text/javascript">document.write(new Date().getFullYear());</script> My Colour | Developer by <a target="_blank" href="http://orcadigital.id/">ORCA DIGITAL.</a></div>
-      <nav class="navigation-footer" style="display: none;">
+      <!-- <nav class="navigation-footer" style="display: none;">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="features.html">Tentang Kami</a></li>
@@ -84,7 +84,7 @@ $ig =  $this->db->get_where('t_config_text', array('tipe' => 'logo_ig'), 6)->row
           <li><a href="blog.html">Berita</a></li>
           <li><a href="contact.html">Hubungi Kami</a></li>
         </ul>
-      </nav>
+      </nav> -->
     </div><!-- End container -->
   </footer><!-- End footer-bottom -->
   
