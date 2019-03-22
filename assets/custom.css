@@ -1,0 +1,6 @@
+.th-sticky {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0;
+    z-index: 2;
+}

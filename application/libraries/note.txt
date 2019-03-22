@@ -1,0 +1,4 @@
+image slider 1600 x 532
+view admin blm ada keterangan aktif
+about us blm ada admin panel
+profil perusahaan

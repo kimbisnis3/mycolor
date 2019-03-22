@@ -1,209 +1,381 @@
-<?php $this->load->view('template/header'); ?>	
-
-	<div id='main' data-scroll-offset='88'>
-
-
-
-	
-<div id='fullscreen_slider_0' class='avia-fullscreen-slider main_color  avia-builder-el-0  el_before_av_section  avia-builder-el-first  container_wrap fullsize'   ><a href='#next-section' title='' class='scroll-down-link' aria-hidden='true' data-av_icon='' data-av_iconfont='entypo-fontello'></a><div  data-size='large'  data-lightbox_size='large'  data-animation='fade'  data-ids='3240,3699,3483,3697,3696,3702'  data-video_counter='0'  data-autoplay='true'  data-bg_slider='true'  data-slide_height='100'  data-handle='av_fullscreen'  data-interval='5'  data-class=' '  data-css_id='fullscreen_slider_0'  data-scroll_down='aviaTBscroll_down'  data-control_layout=''  data-custom_markup=''  data-perma_caption=''  data-autoplay_stopper=''  data-stretch=''  class='avia-slideshow avia-slideshow-1 av-slider-scroll-down-active avia-slideshow-large av_fullscreen   avia-fade-slider '  itemscope="itemscope" itemtype="https://schema.org/ImageObject" >
-
-<ul class='avia-slideshow-inner' >
-
-
-<?php foreach ($ss1 as $t) { ?>
-<li style='background-position:center center;' data-img-url='<?php echo base_url('gopanel'); ?><?php echo $t->imgpost ?>' class=' slide-1 ' ><div data-rel='slideshow-1' class='avia-slide-wrap'  ><a href='<?php echo base_url('/'); ?><?php echo $t->menu ?>/<?php echo $t->slugpost ?>' data-rel='slideshow-1' class='avia-slide-wrap'  ><div class = "caption_fullwidth av-slideshow-caption caption_center caption_center_framed caption_framed"><div class = "container caption_container"><div class = "slideshow_caption"><div class = "slideshow_inner_caption"><div class = "slideshow_align_caption"><h2  class='avia-caption-title'  itemprop="name" ><?php echo $t->judulpost; ?></h2></div></div></div></div></div></div></a></li>
-<?php } ?>
-
-<?php foreach ($ss2 as $t) { ?>
-<li style='background-position:top left;' data-img-url='<?php echo base_url('gopanel'); ?><?php echo $t->imgpost ?>' class=' slide-2 ' ><a href='<?php echo base_url('/'); ?><?php echo $t->menu ?>/<?php echo $t->slugpost ?>' data-rel='slideshow-1' class='avia-slide-wrap'  ><div class = "caption_fullwidth av-slideshow-caption caption_bottom"><div class = "container caption_container"><div class = "slideshow_caption"><div class = "slideshow_inner_caption"><div class = "slideshow_align_caption"><h2  style='font-size:50px; color:#9215d6; ' class='avia-caption-title'  itemprop="name" ><?php echo $t->judulpost; ?></h2></div></div></div></div></div></a>
-</li>
-<?php } ?>
-
-<?php foreach ($ss3 as $t) { ?>
-<li style='background-position:center center;' data-img-url='<?php echo base_url('gopanel'); ?><?php echo $t->imgpost ?>' class=' slide-3 ' ><a href='<?php echo base_url('/'); ?><?php echo $t->menu ?>/<?php echo $t->slugpost ?>' data-rel='slideshow-1' class='avia-slide-wrap'  ><div class = "caption_fullwidth av-slideshow-caption caption_right caption_right_framed caption_framed"><div class = "container caption_container"><div class = "slideshow_caption"><div class = "slideshow_inner_caption"><div class = "slideshow_align_caption"><h2  class='avia-caption-title'  itemprop="name" ><?php echo $t->judulpost; ?></h2></div></div></div></div></div></a>
-</li>
-<?php } ?>
-
-<?php foreach ($ss4 as $t) { ?>
-<li style='background-position:top left;' data-img-url='<?php echo base_url('gopanel'); ?><?php echo $t->imgpost ?>' class=' slide-4 ' ><a href='<?php echo base_url('/'); ?><?php echo $t->menu ?>/<?php echo $t->slugpost ?>' data-rel='slideshow-1' class='avia-slide-wrap'  ><div class = "caption_fullwidth av-slideshow-caption caption_center caption_center_framed caption_framed"><div class = "container caption_container"><div class = "slideshow_caption"><div class = "slideshow_inner_caption"><div class = "slideshow_align_caption"><h2  class='avia-caption-title'  itemprop="name" ><?php echo $t->judulpost; ?></h2></div></div></div></div></div></a>
-</li>
-<?php } ?>
-
-<?php foreach ($ss5 as $t) { ?>
-<li style='background-position:top left;' data-img-url='<?php echo base_url('gopanel'); ?><?php echo $t->imgpost ?>' class=' slide-5 ' ><a href='<?php echo base_url('/'); ?><?php echo $t->menu ?>/<?php echo $t->slugpost ?>' data-rel='slideshow-1' class='avia-slide-wrap'  ><div data-rel='slideshow-1' class='avia-slide-wrap'  ><div class = "caption_fullwidth av-slideshow-caption caption_bottom caption_bottom_framed caption_framed"><div class = "container caption_container"><div class = "slideshow_caption"><div class = "slideshow_inner_caption"><div class = "slideshow_align_caption"><h2  class='avia-caption-title'  itemprop="name" ><?php echo $t->judulpost; ?></h2></div></div></div></div></div></div></a>
-</li>
-<?php } ?>
-
-<?php foreach ($ss6 as $t) { ?>
-<li style='background-position:top left;' data-img-url='<?php echo base_url('gopanel'); ?><?php echo $t->imgpost ?>' class=' slide-6 ' ><a href='<?php echo base_url('/'); ?><?php echo $t->menu ?>/<?php echo $t->slugpost ?>' data-rel='slideshow-1' class='avia-slide-wrap'  ><div class = "caption_fullwidth av-slideshow-caption caption_bottom caption_bottom_framed caption_framed"><div class = "container caption_container"><div class = "slideshow_caption"><div class = "slideshow_inner_caption"><div class = "slideshow_align_caption"><h2  class='avia-caption-title'  itemprop="name" ><?php echo $t->judulpost; ?></h2></div></div></div></div></div></a>
-</li>
-<?php } ?>
-</ul>
-
-<div class='avia-slideshow-arrows avia-slideshow-controls'><a href='#prev' class='prev-slide' aria-hidden='true' data-av_icon='' data-av_iconfont='entypo-fontello'>Previous</a><a href='#next' class='next-slide' aria-hidden='true' data-av_icon='' data-av_iconfont='entypo-fontello'>Next</a></div><div class='avia-slideshow-dots avia-slideshow-controls'>
-
-<a href='#1' class='goto-slide active' >1</a>
-
-<a href='#2' class='goto-slide ' >2</a>
-
-<a href='#3' class='goto-slide ' >3</a>
-
-<a href='#4' class='goto-slide ' >4</a>
-
-<a href='#5' class='goto-slide ' >5</a>
-
-<a href='#6' class='goto-slide ' >6</a>
-
-</div>
-
-</div></div>
-
-<div id='about-us' class='avia-section alternate_color avia-section-large avia-shadow avia-bg-style-scroll  avia-builder-el-1  el_after_av_fullscreen  el_before_av_two_third  container_wrap fullsize'   ><div class='container' ><div class='template-page content  av-content-full alpha units'><div class='post-entry post-entry-type-page post-entry-2251'><div class='entry-content-wrapper clearfix'>
-<div class="flex_column av_one_half first  avia-builder-el-2  el_before_av_one_half  avia-builder-el-first  "><div class='avia-icon-list-container  avia-builder-el-3  avia-builder-el-no-sibling '>
-	
-<ul class='avia-icon-list avia-icon-list-right avia_animate_when_almost_visible'>
-<?php foreach ( $descsatu as $t ) { ?>
-<li>
-	<div  class='iconlist_icon avia-font-entypo-fontello'><span class='iconlist-char' aria-hidden='true' data-av_icon='' data-av_iconfont='entypo-fontello'></span></div><article class="article-icon-entry "  itemscope="itemscope" itemtype="https://schema.org/CreativeWork" ><div class='iconlist_content_wrap'><header class="entry-content-header"><h4 class='iconlist_title'  itemprop="headline"  ><?php echo $t->judul ?></h4></header><div class='iconlist_content '  itemprop="text"  ><p><?php echo $t->teks ?>.</p>
-	</div></div><footer class="entry-footer"></footer></article><div class='iconlist-timeline'></div>
-</li>
-<?php } ?>
-
-<?php foreach ( $descdua as $t ) { ?>
-<li>
-	<div  class='iconlist_icon avia-font-entypo-fontello'><span class='iconlist-char' aria-hidden='true' data-av_icon='' data-av_iconfont='entypo-fontello'></span></div><article class="article-icon-entry "  itemscope="itemscope" itemtype="https://schema.org/CreativeWork" ><div class='iconlist_content_wrap'><header class="entry-content-header"><h4 class='iconlist_title'  itemprop="headline"  ><?php echo $t->judul ?></h4></header><div class='iconlist_content '  itemprop="text"  ><p><?php echo $t->teks ?></p>
-</div></div><footer class="entry-footer"></footer></article><div class='iconlist-timeline'></div>
-</li>
-<?php } ?>
-
-<?php foreach ( $desctiga as $t ) { ?>
-<li>
-	<div  class='iconlist_icon avia-font-entypo-fontello'><span class='iconlist-char' aria-hidden='true' data-av_icon='' data-av_iconfont='entypo-fontello'></span></div><article class="article-icon-entry "  itemscope="itemscope" itemtype="https://schema.org/CreativeWork" ><div class='iconlist_content_wrap'><header class="entry-content-header"><h4 class='iconlist_title'  itemprop="headline"  ><?php echo $t->judul ?></h4></header><div class='iconlist_content '  itemprop="text"  ><p><?php echo $t->teks ?></p>
-</div></div><footer class="entry-footer"></footer></article><div class='iconlist-timeline'></div>
-</li>
-<?php } ?>
-
-<?php foreach ( $descempat as $t ) { ?>
-<li>
-	<div  class='iconlist_icon avia-font-entypo-fontello'><span class='iconlist-char' aria-hidden='true' data-av_icon='' data-av_iconfont='entypo-fontello'></span></div><article class="article-icon-entry "  itemscope="itemscope" itemtype="https://schema.org/CreativeWork" ><div class='iconlist_content_wrap'><header class="entry-content-header"><h4 class='iconlist_title'  itemprop="headline"  ><?php echo $t->judul ?></h4></header><div class='iconlist_content '  itemprop="text"  ><p><?php echo $t->teks ?></p>
-</div></div><footer class="entry-footer"></footer></article><div class='iconlist-timeline'></div>
-</li>
-<?php } ?>
-
-</ul>
-
-</div></div>
-<?php foreach ( $deskripsi as $t ) { ?>
-<div class="flex_column av_one_half   avia-builder-el-4  el_after_av_one_half  avia-builder-el-last  "><div style='padding-bottom:10px;' class='av-special-heading av-special-heading-h1 meta-heading   avia-builder-el-5  el_before_av_textblock  avia-builder-el-first  '><h1 class='av-special-heading-tag'  itemprop="headline"  ><font size="20"><?php echo $t->judul ?></font></h1><div class='special-heading-border'><div class='special-heading-inner-border' ></div></div></div>
-<section class="av_textblock_section"  itemscope="itemscope" itemtype="https://schema.org/CreativeWork" ><div class='avia_textblock '  style='font-size:14px; '  itemprop="text" ><p style="text-align: justify;">
-<p style="text-align: justify;">
-
-<span class="av_dropcap2 " ></span>
-<?php echo $t->teks ?>
-
-<?php } ?>
-<p style="text-align: justify;">
-<p style="text-align: justify;">
-<p style="text-align: justify;">
-</div></section>
-<!--
-<div  class='hr hr-short hr-left  avia-builder-el-7  el_after_av_textblock  el_before_av_button '>
-<span class='hr-inner ' ><span class='hr-inner-style'></span></span></div>
-<div class='avia-button-wrap avia-button-left  avia-builder-el-8  el_after_av_hr  avia-builder-el-last '><a href='manually' class='avia-button  avia-icon_select-yes-left-icon avia-color-theme-color avia-size-large avia-position-left '   ><span class='avia_button_icon avia_button_icon_left ' aria-hidden='true' data-av_icon='' data-av_iconfont='entypo-fontello'></span><span class='avia_iconbox_title' >Sejarah</span></a></div></div>
--->
-</div></div></div><!-- close content main div --></div></div><div id='after_section_1' class='main_color container_wrap fullsize'   ><div class='container' ><div class='template-page content  av-content-full alpha units'><div class='post-entry post-entry-type-page post-entry-2251'><div class='entry-content-wrapper clearfix'>
-<div class="flex_column av_two_third first  avia-builder-el-9  el_after_av_section  el_before_av_one_third  avia-builder-el-first  "><section class="av_textblock_section"  itemscope="itemscope" itemtype="https://schema.org/CreativeWork" ><div class='avia_textblock '  style='font-size:30px; '  itemprop="text" ><p>
-
-<strong>BERITA</strong></p>
-</div></section>
-<div  class='hr hr-short hr-left  avia-builder-el-11  el_after_av_textblock  el_before_av_postslider '><span class='hr-inner ' ><span class='hr-inner-style'></span></span></div>
-<div  data-autoplay='1'  data-interval='5'  data-animation='fade'  data-show_slide_delay='90'  class='avia-content-slider avia-content-slider-active avia-content-slider1 avia-content-slider-odd  avia-builder-el-12  el_after_av_hr  avia-builder-el-last '  itemscope="itemscope" itemtype="https://schema.org/Blog" >
-
-<div class='avia-content-slider-inner'>
-
-<div class='slide-entry-wrap'>
+<?php $this->load->view('template/header') ?>
 <?php 
-$first = 1;
-$no    = 1;
-foreach ($berita as $t ) { 
-$classfirst = "";
-$word = "";
+$ss =  $this->db->get_where('t_config_image', array('tipe' => 'ss', 'aktif' => '1'))->result();
 
-
-if (($no % 3) == 1)  {
-	$classfirst = 'first';
-}
-
-if ((($no % 3) ==  0) AND ($no !=9 )) {
-	$word = "</div>
-	<div class='slide-entry-wrap'>";
-}
-
-if ($no ==  9) {
-	$word = "</div>";
-}
-
-?>
-
-<article class='slide-entry flex_column  post-entry post-entry-3772 slide-entry-overview slide-loop-<?php echo $no;  ?> slide-parity-even  av_one_third <?php echo $classfirst; ?> real-thumbnail'  itemscope="itemscope" itemtype="https://schema.org/BlogPosting" itemprop="blogPost" ><a href='<?php echo base_url(); ?>/berita/<?php echo $t->slug; ?>' data-rel='slide-1' class='slide-image' title=''><img width="495" height="400" src="<?php echo base_url('gopanel'); ?><?php echo $t->gambar ?>" class="attachment-portfolio size-portfolio wp-post-image" alt="<?php echo $t->judul; ?>" srcset="<?php echo base_url('gopanel'); ?><?php echo $t->gambar ?>" sizes="(max-width: 495px) 100vw, 495px" /></a><div class='slide-content'><header class="entry-content-header"><h3 class='slide-entry-title entry-title'  itemprop="headline" ><a href='<?php echo base_url(); ?>/berita/<?php echo $t->slug; ?>' title='<?php echo $t->judul; ?>'><?php echo $t->judul; ?></a></h3></header><div class='slide-meta'><div class='slide-meta-comments'><a href='<?php echo base_url(); ?>/berita/<?php echo $t->slug; ?>'></a></div><div class='slide-meta-del'></div><time class='slide-meta-time updated'  itemprop="datePublished" datetime="2018-04-05T10:07:36+00:00" ></time></div><div class='slide-entry-excerpt entry-content'  itemprop="text" ><?php echo word_limiter($t->artikel,6); ?>...</div></div><footer class="entry-footer"></footer>
-
-</article>
-<?php echo $word; ?>
-<?php 
-$first++; 
-$no++;
- } ?>
-
-<!--</div>-->
-
-
-
-</div>
-
-<div class='avia-slideshow-arrows avia-slideshow-controls'><a href='#prev' class='prev-slide' aria-hidden='true' data-av_icon='' data-av_iconfont='entypo-fontello'>Previous</a><a href='#next' class='next-slide' aria-hidden='true' data-av_icon='' data-av_iconfont='entypo-fontello'>Next</a></div>
-
-</div></div>
-
-<div class="flex_column av_one_third   avia-builder-el-13  el_after_av_two_third  el_before_av_section  avia-builder-el-last  "><section class="av_textblock_section"  itemscope="itemscope" itemtype="https://schema.org/CreativeWork" ><div class='avia_textblock '  style='font-size:30px; '  itemprop="text" ><p><strong>ARTIKEL</strong></p>
-</div></section>
-<div  class='hr hr-short hr-left  avia-builder-el-15  el_after_av_textblock  el_before_av_postslider '><span class='hr-inner ' ><span class='hr-inner-style'></span></span></div>
-</div>
-
-<?php foreach ( $artikel as $t ) { ?>
-<article class='slide-entry flex_column  post-entry post-entry-3747 slide-entry-overview slide-loop-9 slide-parity-odd  post-entry-last  av_one_third  real-thumbnail'  itemscope="itemscope" itemtype="https://schema.org/BlogPosting" itemprop="blogPost" ><a href='<?php echo base_url(); ?>/berita/<?php echo $t->slug; ?>' data-rel='slide-1' class='slide-image' title=''><img width="495" height="400" src="<?php echo base_url('gopanel'); ?><?php echo $t->gambar ?>" class="attachment-portfolio size-portfolio wp-post-image" alt="<?php echo $t->judul; ?>" srcset="<?php echo base_url(); ?>/berita/<?php echo $t->slug; ?>" sizes="(max-width: 495px) 100vw, 495px" /></a><div class='slide-content'><header class="entry-content-header"><h3 class='slide-entry-title entry-title'  itemprop="headline" ><a href='<?php echo base_url(); ?>/berita/<?php echo $t->slug; ?>' title='<?php echo $t->judul; ?>'><?php echo $t->judul; ?></a></h3></header><div class='slide-meta'><div class='slide-meta-comments'><a href='<?php echo base_url(); ?>/berita/<?php echo $t->slug; ?>'></a></div><div class='slide-meta-del'></div><time class='slide-meta-time updated'  itemprop="datePublished" datetime="2018-04-05T10:07:36+00:00" ></time></div><div class='slide-entry-excerpt entry-content'  itemprop="text" ><?php echo word_limiter($t->artikel,6); ?>...</div></div><footer class="entry-footer"></footer>
-</article>
-<?php } ?>
-
-<?php foreach ( $bgweb as $t ) { ?>
-</div></div><!-- close content main div --></div></div><div id='av_section_2' class='avia-section main_color avia-section-large avia-no-shadow avia-bg-style-fixed avia-full-stretch  avia-builder-el-17  el_after_av_one_third  el_before_av_section  container_wrap fullsize' style = 'background-repeat: no-repeat; background-image: url(<?php echo base_url('gopanel'); ?><?php echo $t->gambar ?>); background-attachment: fixed; background-position: top left; ' data-section-bg-repeat='stretch' ><div class='container' ><div class='template-page content  av-content-full alpha units'><div class='post-entry post-entry-type-page post-entry-2251'><div class='entry-content-wrapper clearfix'>
-</div></div></div><!-- close content main div --></div></div><div id='av_section_3' class='avia-section main_color avia-section-large avia-no-shadow avia-bg-style-fixed  avia-builder-el-18  el_after_av_section  avia-builder-el-last  container_wrap fullsize' style = 'background-color: #f7f7f7; '  ><div class='container' ><div class='template-page content  av-content-full alpha units'><div class='post-entry post-entry-type-page post-entry-2251'><div class='entry-content-wrapper clearfix'>
-<?php } ?>
-<section class="av_textblock_section"  itemscope="itemscope" itemtype="https://schema.org/CreativeWork" >
-<div class='avia_textblock '  style='font-size:30px; '  itemprop="text" >
-	<p style="text-align: center;">FASILITAS<strong> SEKOLAH</strong></p>
-</div>
-</section>
-
-<div  class='hr hr-short hr-center  avia-builder-el-20  el_after_av_textblock  el_before_av_one_fifth '>
-	<span class='hr-inner ' ><span class='hr-inner-style'></span></span>
-</div>
-
-
-<?php 
-$no    = 1;
-foreach ( $fasilitas as $t ) { 
-$classfirst = "";
-if (($no % 5) == 1)  {
-	$classfirst = 'first';
-}
-?>
-
-<div class="flex_column av_one_fifth <?php echo $classfirst; ?>   avia-builder-el-23  el_after_av_one_fifth  el_before_av_one_fifth  "><article class="iconbox iconbox_top main_color   avia-builder-el-24  avia-builder-el-no-sibling "  itemscope="itemscope" itemtype="https://schema.org/CreativeWork" ><div class="iconbox_content"><header class="entry-content-header"><div class="iconbox_icon heading-color" aria-hidden='true' data-av_icon='' data-av_iconfont='entypo-fontello'  ></div><h3 class='iconbox_content_title'  itemprop="headline"  > <?php echo $t->judul ?> </h3></header><div class='iconbox_content_container '  itemprop="text"  ></div></div><footer class="entry-footer"></footer></article></div>
-
-<?php $no++; } ?>
+ ?>
+<div class="slideshow">
+		<div class="tp-banner-container">
+			<div class="tp-banner">
+				<ul>
+					<?php foreach ( $ss as $t ) { ?>
+					<li data-transition="random" data-slotamount="7" data-masterspeed="500">
+						<!-- MAIN IMAGE -->
+						<img src="custompanel/<?php echo $t->image ?>" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+						
+						<div class="slideshow-bg"
+						data-y="310"
+						data-x="center"
+						data-start="0"></div>
+					</li>
+					<?php } ?>
+				</ul>
+			</div>
+		</div><!-- End tp-banner-container -->
+	</div><!-- End slideshow -->
 	
-
-</div></div></div><!-- close content main div --> <!-- section close by builder template -->		</div><!--end builder template--></div><!-- close default .container_wrap element -->						
-
-
-<?php $this->load->view('template/footer'); ?>
+	<div class="sections">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="box-icon box-icon-2 box-icon-3">
+						<div class="box-icon-i box-icon-i-2 box-icon-i-5"><i class="fa fa-thumbs-up"></i></div>
+						<div class="box-icon-content">
+							<h5>Kualitas Terbaik</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Integer lorem quam adipiscing.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="box-icon box-icon-2 box-icon-3">
+						<div class="box-icon-i box-icon-i-2 box-icon-i-5"><i class="fa fa-money"></i></div>
+						<div class="box-icon-content">
+							<h5>Harga Terjangkau</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Integer lorem quam adipiscing.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="box-icon box-icon-2 box-icon-3">
+						<div class="box-icon-i box-icon-i-2 box-icon-i-5"><i class="fa fa-bolt"></i></div>
+						<div class="box-icon-content">
+							<h5>Pelayanan Cepat</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Integer lorem quam adipiscing.</p>
+						</div>
+					</div>
+				</div>
+			</div><!-- End row -->
+			<br><br>
+			<div class="load-more-projects"><a class="button-1" href="about">Sekilas Tentang Kami</a></div>
+		</div><!-- End container -->
+	</div><!-- End sections -->
+	
+	<div class="sections section-2">
+		<div class="container">
+			<div class="sections-title">
+				<div class="sections-title-h3"><h3>Produk Unggulan Kami</h3></div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis. Pellentesque cursus arcu id magna euismod in elementum purus molestie.</p>
+			</div><!-- End sections-title -->
+			<div class="row" style="display: none;">
+				<div class="col-md-12 protfolio-filter">
+					<ul>
+						<li class="current"><a data-filter="*" href="#">ALL</a></li>
+						<li><a data-filter=".term-photography" href="#">Photography</a></li>
+						<li><a data-filter=".term-design" href="#">Design</a></li>
+						<li><a data-filter=".term-development" href="#">Development</a></li>
+						<li><a data-filter=".term-wordpress" href="#">Wordpress</a></li>
+					</ul>
+				</div>
+			</div><!-- End row -->
+			<div class="row portfolio-all portfolio-0">
+				<ul>
+					<li class="col-md-3 term-design portfolio-item isotope-item">
+						<div class="portfolio-one">
+							<div class="portfolio-head">
+								<div class="portfolio-img"><img alt="" src="assets/images/portfolio-1.jpg" style="height: 250px;"></div>
+								<div class="portfolio-hover">
+									<a class="portfolio-link" href="single-portfolio.html"><i class="fa fa-link"></i></a>
+									<a class="portfolio-zoom prettyPhoto" href="assets/images/portfolio-1.jpg"><i class="fa fa-search"></i></a>
+								</div>
+							</div><!-- End portfolio-head -->
+							<div class="portfolio-content">
+								<i class="fa fa-leaf"></i>
+								<div class="portfolio-meta">
+									<div class="portfolio-name"><h6><a href="single-portfolio.html">Backdrop 1</a></h6></div>
+									<div class="portfolio-cat"><a href="#">Backdrop</a></div>
+								</div><!-- End portfolio-meta -->
+							</div><!-- End portfolio-content -->
+						</div><!-- End portfolio-item -->
+					</li>
+					<li class="col-md-3 term-photography portfolio-item isotope-item">
+						<div class="portfolio-one">
+							<div class="portfolio-head">
+								<div class="portfolio-img"><img alt="" src="assets/images/portfolio-2.jpg" style="height: 250px;></div>
+								<div class="portfolio-hover">
+									<a class="portfolio-link" href="single-portfolio.html"><i class="fa fa-link"></i></a>
+									<a class="portfolio-zoom prettyPhoto" href="assets/images/portfolio-2.jpg"><i class="fa fa-search"></i></a>
+								</div>
+							</div><!-- End portfolio-head -->
+							<div class="portfolio-content">
+								<i class="fa fa-leaf"></i>
+								<div class="portfolio-meta">
+									<div class="portfolio-name"><h6><a href="single-portfolio.html">Backdrop 2</a></h6></div>
+									<div class="portfolio-cat"><a href="#">Backdrop</a></div>
+								</div><!-- End portfolio-meta -->
+							</div><!-- End portfolio-content -->
+						</div><!-- End portfolio-item -->
+					</li>
+					<li class="col-md-3 term-design portfolio-item isotope-item">
+						<div class="portfolio-one">
+							<div class="portfolio-head">
+								<div class="portfolio-img"><img alt="" src="assets/images/portfolio-3.jpg" style="height: 250px;></div>
+								<div class="portfolio-hover">
+									<a class="portfolio-link" href="single-portfolio.html"><i class="fa fa-link"></i></a>
+									<a class="portfolio-zoom prettyPhoto" href="assets/images/portfolio-3.jpg"><i class="fa fa-search"></i></a>
+								</div>
+							</div><!-- End portfolio-head -->
+							<div class="portfolio-content">
+								<i class="fa fa-leaf"></i>
+								<div class="portfolio-meta">
+									<div class="portfolio-name"><h6><a href="single-portfolio.html">Baliho</a></h6></div>
+									<div class="portfolio-cat"><a href="#">Baliho</a></div>
+								</div><!-- End portfolio-meta -->
+							</div><!-- End portfolio-content -->
+						</div><!-- End portfolio-item -->
+					</li>
+					<li class="col-md-3 term-photography portfolio-item isotope-item">
+						<div class="portfolio-one">
+							<div class="portfolio-head">
+								<div class="portfolio-img"><img alt="" src="assets/images/portfolio-4.jpg" style="height: 250px;></div>
+								<div class="portfolio-hover">
+									<a class="portfolio-link" href="single-portfolio.html"><i class="fa fa-link"></i></a>
+									<a class="portfolio-zoom prettyPhoto" href="assets/images/portfolio-4.jpg"><i class="fa fa-search"></i></a>
+								</div>
+							</div><!-- End portfolio-head -->
+							<div class="portfolio-content">
+								<i class="fa fa-leaf"></i>
+								<div class="portfolio-meta">
+									<div class="portfolio-name"><h6><a href="single-portfolio.html">Board</a></h6></div>
+									<div class="portfolio-cat"><a href="#">Board</a></div>
+								</div><!-- End portfolio-meta -->
+							</div><!-- End portfolio-content -->
+						</div><!-- End portfolio-item -->
+					</li>
+					<li class="col-md-3 term-development portfolio-item isotope-item">
+						<div class="portfolio-one">
+							<div class="portfolio-head">
+								<div class="portfolio-img"><img alt="" src="assets/images/portfolio-5.jpg" style="height: 250px;"></div>
+								<div class="portfolio-hover">
+									<a class="portfolio-link" href="single-portfolio.html"><i class="fa fa-link"></i></a>
+									<a class="portfolio-zoom prettyPhoto" href="assets/images/portfolio-5.jpg"><i class="fa fa-search"></i></a>
+								</div>
+							</div><!-- End portfolio-head -->
+							<div class="portfolio-content">
+								<i class="fa fa-leaf"></i>
+								<div class="portfolio-meta">
+									<div class="portfolio-name"><h6><a href="single-portfolio.html">Huruf Timbul 1</a></h6></div>
+									<div class="portfolio-cat"><a href="#">Huruf Timbul</a></div>
+								</div><!-- End portfolio-meta -->
+							</div><!-- End portfolio-content -->
+						</div><!-- End portfolio-item -->
+						</li>
+						<li class="col-md-3 term-development portfolio-item isotope-item">
+						<div class="portfolio-one">
+							<div class="portfolio-head">
+								<div class="portfolio-img"><img alt="" src="assets/images/portfolio-6.jpg" style="height: 250px;"></div>
+								<div class="portfolio-hover">
+									<a class="portfolio-link" href="single-portfolio.html"><i class="fa fa-link"></i></a>
+									<a class="portfolio-zoom prettyPhoto" href="assets/images/portfolio-6.jpg"><i class="fa fa-search"></i></a>
+								</div>
+							</div><!-- End portfolio-head -->
+							<div class="portfolio-content">
+								<i class="fa fa-leaf"></i>
+								<div class="portfolio-meta">
+									<div class="portfolio-name"><h6><a href="single-portfolio.html">Huruf Timbul 2</a></h6></div>
+									<div class="portfolio-cat"><a href="#">Huruf Timbul</a></div>
+								</div><!-- End portfolio-meta -->
+							</div><!-- End portfolio-content -->
+						</div><!-- End portfolio-item -->
+					</li>
+					<li class="col-md-3 term-wordpress portfolio-item isotope-item">
+						<div class="portfolio-one">
+							<div class="portfolio-head">
+								<div class="portfolio-img"><img alt="" src="assets/images/portfolio-7.jpg"> style="height: 250px;</div>
+								<div class="portfolio-hover">
+									<a class="portfolio-link" href="single-portfolio.html"><i class="fa fa-link"></i></a>
+									<a class="portfolio-zoom prettyPhoto" href="assets/images/portfolio-7.jpg"><i class="fa fa-search"></i></a>
+								</div>
+							</div><!-- End portfolio-head -->
+							<div class="portfolio-content">
+								<i class="fa fa-leaf"></i>
+								<div class="portfolio-meta">
+									<div class="portfolio-name"><h6><a href="single-portfolio.html">Neon Box</a></h6></div>
+									<div class="portfolio-cat"><a href="#">Neon Box</a></div>
+								</div><!-- End portfolio-meta -->
+							</div><!-- End portfolio-content -->
+						</div><!-- End portfolio-item -->
+					</li>
+					<li class="col-md-3 term-wordpress portfolio-item isotope-item">
+						<div class="portfolio-one">
+							<div class="portfolio-head">
+								<div class="portfolio-img"><img alt="" src="assets/images/portfolio-8.jpg" style="height: 250px;></div>
+								<div class="portfolio-hover">
+									<a class="portfolio-link" href="single-portfolio.html"><i class="fa fa-link"></i></a>
+									<a class="portfolio-zoom prettyPhoto" href="assets/images/portfolio-8.jpg"><i class="fa fa-search"></i></a>
+								</div>
+							</div><!-- End portfolio-head -->
+							<div class="portfolio-content">
+								<i class="fa fa-leaf"></i>
+								<div class="portfolio-meta">
+									<div class="portfolio-name"><h6><a href="single-portfolio.html">Wall Paint</a></h6></div>
+									<div class="portfolio-cat"><a href="#">Wall Paint</a></div>
+								</div><!-- End portfolio-meta -->
+							</div><!-- End portfolio-content -->
+						</div><!-- End portfolio-item -->
+					</li>
+				</ul>
+			</div><!-- End portfolio-0 -->
+			<div class="load-more-projects"><a class="button-1 button-2" href="portfolio-description.html">Lihat Produk Lainnya</a></div>
+		</div><!-- End container -->
+	</div><!-- End sections -->
+	
+	
+	<div class="sections sections-padding-b-50">
+		<div class="container">
+			<div class="sections-title">
+				<div class="sections-title-h3"><h3>Berita Terbaru</h3></div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis. Pellentesque cursus arcu id magna euismod in elementum purus molestie.</p>
+			</div><!-- End sections-title -->
+			<div class="row">
+				<div class="bxslider-slide blog-silde">
+					<ul>
+						<li>
+							<div class="col-md-4 blog-item">
+								<div class="blog-one">
+									<div class="blog-img">
+										<img alt="" src="assets/images/blog-1.png">
+										<div class="blog-date"><span>3</span><span>July, 2014</span></div>
+									</div><!-- End blog-img -->
+									<div class="blog-content">
+										<h6><a href="single-blog.html">Blog Tiltle Shall Be Here !</a></h6>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis. <a href="single-blog.html">Read More</a></p>
+									</div><!-- End blog-content -->
+									<div class="clearfix"></div>
+								</div><!-- End blog-item -->
+							</div>
+							<div class="col-md-4 blog-item">
+								<div class="blog-one">
+									<div class="blog-img">
+										<img alt="" src="assets/images/blog-1.png">
+										<div class="blog-date"><span>2</span><span>July, 2014</span></div>
+									</div><!-- End blog-img -->
+									<div class="blog-content">
+										<h6><a href="single-blog.html">Blog Tiltle Shall Be Here !</a></h6>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis. <a href="single-blog.html">Read More</a></p>
+									</div><!-- End blog-content -->
+									<div class="clearfix"></div>
+								</div><!-- End blog-item -->
+							</div>
+							<div class="col-md-4 blog-item">
+								<div class="blog-one">
+									<div class="blog-img">
+										<img alt="" src="assets/images/blog-1.png">
+										<div class="blog-date"><span>3</span><span>July, 2014</span></div>
+									</div><!-- End blog-img -->
+									<div class="blog-content">
+										<h6><a href="single-blog.html">Blog Tiltle Shall Be Here !</a></h6>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis. <a href="single-blog.html">Read More</a></p>
+									</div><!-- End blog-content -->
+									<div class="clearfix"></div>
+								</div><!-- End blog-item -->
+							</div>
+						</li>
+						<li>
+							<div class="col-md-4 blog-item">
+								<div class="blog-one">
+									<div class="blog-img">
+										<img alt="" src="assets/images/blog-1.png">
+										<div class="blog-date"><span>3</span><span>July, 2014</span></div>
+									</div><!-- End blog-img -->
+									<div class="blog-content">
+										<h6><a href="single-blog.html">Blog Tiltle Shall Be Here !</a></h6>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis. <a href="single-blog.html">Read More</a></p>
+									</div><!-- End blog-content -->
+									<div class="clearfix"></div>
+								</div><!-- End blog-item -->
+							</div>
+							<div class="col-md-4 blog-item">
+								<div class="blog-one">
+									<div class="blog-img">
+										<img alt="" src="assets/images/blog-1.png">
+										<div class="blog-date"><span>2</span><span>July, 2014</span></div>
+									</div><!-- End blog-img -->
+									<div class="blog-content">
+										<h6><a href="single-blog.html">Blog Tiltle Shall Be Here !</a></h6>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis. <a href="single-blog.html">Read More</a></p>
+									</div><!-- End blog-content -->
+									<div class="clearfix"></div>
+								</div><!-- End blog-item -->
+							</div>
+							<div class="col-md-4 blog-item">
+								<div class="blog-one">
+									<div class="blog-img">
+										<img alt="" src="assets/images/blog-1.png">
+										<div class="blog-date"><span>3</span><span>July, 2014</span></div>
+									</div><!-- End blog-img -->
+									<div class="blog-content">
+										<h6><a href="single-blog.html">Blog Tiltle Shall Be Here !</a></h6>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis. <a href="single-blog.html">Read More</a></p>
+									</div><!-- End blog-content -->
+									<div class="clearfix"></div>
+								</div><!-- End blog-item -->
+							</div>
+						</li>
+					</ul>
+				</div><!-- End blog-silde -->
+			</div><!-- End row -->
+		</div><!-- End container -->
+	</div><!-- End sections -->
+	
+	<div class="sections sections-padding-t-0 sections-padding-b-50">
+		<div class="container">
+			<div class="head-title"><h6>Klien Kami</h6></div>
+			<div class="row">
+				<div class="bxslider-slide bxslider-slide-title clients-slide">
+					<ul>
+						<li>
+							<div class="col-md-2 client-item">
+								<div class="client"><a href="#"><img alt="" src="assets/images/client-1.png"></a></div>
+							</div>
+							<div class="col-md-2 client-item">
+								<div class="client"><a href="#"><img alt="" src="assets/images/client-2.png"></a></div>
+							</div>
+							<div class="col-md-2 client-item">
+								<div class="client"><a href="#"><img alt="" src="assets/images/client-1.png"></a></div>
+							</div>
+							<div class="col-md-2 client-item">
+								<div class="client"><a href="#"><img alt="" src="assets/images/client-2.png"></a></div>
+							</div>
+							<div class="col-md-2 client-item">
+								<div class="client"><a href="#"><img alt="" src="assets/images/client-1.png"></a></div>
+							</div>
+							<div class="col-md-2 client-item">
+								<div class="client"><a href="#"><img alt="" src="assets/images/client-2.png"></a></div>
+							</div>
+						</li>
+						<li>
+							<div class="col-md-2 client-item">
+								<div class="client"><a href="#"><img alt="" src="assets/images/client-1.png"></a></div>
+							</div>
+							<div class="col-md-2 client-item">
+								<div class="client"><a href="#"><img alt="" src="assets/images/client-2.png"></a></div>
+							</div>
+							<div class="col-md-2 client-item">
+								<div class="client"><a href="#"><img alt="" src="assets/images/client-1.png"></a></div>
+							</div>
+							<div class="col-md-2 client-item">
+								<div class="client"><a href="#"><img alt="" src="assets/images/client-1.png"></a></div>
+							</div>
+							<div class="col-md-2 client-item">
+								<div class="client"><a href="#"><img alt="" src="assets/images/client-2.png"></a></div>
+							</div>
+							<div class="col-md-2 client-item">
+								<div class="client"><a href="#"><img alt="" src="assets/images/client-1.png"></a></div>
+							</div>
+						</li>
+					</ul>
+				</div><!-- End clients-slide -->
+			</div><!-- End row -->
+		</div><!-- End container -->
+	</div><!-- End sections -->
+<?php $this->load->view('template/footer') ?>
+<?php $this->load->view('template/js') ?>

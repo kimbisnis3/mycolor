@@ -22,12 +22,12 @@ $route['404_override'] = 'error'; //to showing error
 $route['translate_uri_dashes'] = FALSE;
 $route['tryload/genDummy'] = 'tryload/genDummy';
 
-$route[$param] = $baseparam;
+// $route[$param] = $baseparam;
 
-$route['galeri'] = 'galeri'; //manual routing.
-$route['admin']  = 'admin'; //manual routing
-$route[$param.'/index'] = $baseparam.'/index'; //pagination first page
-$route[$param.'/index/(:num)'] = $baseparam.'/index/(:num)'; //pg nxt page
-$route[$param.'/'.$param2] = $baseparam.'/read/'.$param2; // open article
+// $route['galeri'] = 'galeri'; //manual routing.
+// $route['admin']  = 'admin'; //manual routing
+// $route[$param.'/index'] = $baseparam.'/index'; //pagination first page
+// $route[$param.'/index/(:num)'] = $baseparam.'/index/(:num)'; //pg nxt page
+// $route[$param.'/'.$param2] = $baseparam.'/read/'.$param2; // open article
 
 

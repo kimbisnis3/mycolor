@@ -1,22 +1,23 @@
-<!-- cart-js -->
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="<?php echo base_url('assets/js/minicart.js'); ?>"></script>
-	<script>
-        w3ls1.render();
+<div class="go-up"><i class="fa fa-chevron-up"></i></div>
 
-        w3ls1.cart.on('w3sb1_checkout', function (evt) {
-        	var items, len, i;
+<!-- js -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/html5.js"></script>
+<script src="assets/js/jquery.isotope.min.js"></script>
+<script src="assets/js/jquery.nicescroll.min.js"></script>
+<script src="assets/js/jquery.appear.js"></script>
+<script src="assets/js/count-to.js"></script>
+<script src="assets/js/twitter/jquery.tweet.js"></script>
+<script src="assets/js/jquery.inview.min.js"></script>
+<script src="assets/js/jquery.prettyPhoto.js"></script>
+<script src="assets/js/jquery.bxslider.min.js"></script>
+<script src="assets/js/jquery.themepunch.plugins.min.js"></script>
+<script src="assets/js/jquery.themepunch.revolution.min.js"></script>
+<script src="assets/js/custom.js"></script>
+<!-- End js -->
+<script type="text/javascript">
+    $('.<?php echo $aktifmenu ?>').addClass('current_page_item');
+</script>
 
-        	if (this.subtotal() > 0) {
-        		items = this.items();
-
-        		for (i = 0, len = items.length; i < len; i++) {
-        			items[i].set('shipping', 0);
-        			items[i].set('shipping2', 0);
-        		}
-        	}
-        });
-    </script>  
-	<!-- //cart-js -->  
 </body>
 </html>
