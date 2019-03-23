@@ -6,12 +6,8 @@
 			</div><!-- End sections-title -->
 			<div class="row">
 				<div class="col-md-4">
-					<div class="">
-						<ul>
-							<li><img alt="" src="custompanel/<?php echo $maindata->image; ?>"></li>
-							<!-- <li><img alt="" src="images/about-2.jpg"></li> -->
-						</ul>
-					</div>
+							<img alt="" src="<?php echo $this->config->item('admin_page') ?>/<?php echo $maindata->image; ?>">
+						
 				</div>
 				<div class="col-md-8">
 					<?php echo $maindata->ket; ?>

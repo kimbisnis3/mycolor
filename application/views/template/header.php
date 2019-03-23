@@ -17,6 +17,10 @@ $logo =  $this->db->get_where('t_config_image', array('tipe' => 'logo'))->row();
 		width: 100%;
     	max-height: 150px;
 	}
+	.page_active {
+		background-color: #dd0000 !important;
+		color: #fff !important;
+	}
 </style>
 <head>
 
@@ -30,16 +34,16 @@ $logo =  $this->db->get_where('t_config_image', array('tipe' => 'logo'))->row();
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
 	<!-- Main Style -->
-	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>assets/style.css">
 	
 	<!-- Skins -->
-	<link rel="stylesheet" href="assets/css/skins/skins.css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>assets/css/skins/skins.css">
 	
 	<!-- Responsive Style -->
-	<link rel="stylesheet" href="assets/css/responsive.css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>assets/css/responsive.css">
 	
 	<!-- Favicons -->
-	<link rel="shortcut icon" href="assets/assets/images/favicon.png">
+	<link rel="shortcut icon" href="<?php echo base_url() ?>assets/assets/images/favicon.png">
   
 </head>
 <body>
@@ -53,17 +57,17 @@ $logo =  $this->db->get_where('t_config_image', array('tipe' => 'logo'))->row();
 			<nav class="navigation navbar-fixed-top"> 
 				<ul>
 					<li class="home"><a href="<?php echo base_url() ?>">Home</a></li>
-					<li class="about"><a href="about">Tentang Kami</a></li>
+					<li class="about"><a href="<?php echo base_url() ?>about">Tentang Kami</a></li>
 					<li class="produk"><a href="#">Produk</a>
 						<ul>
 							<?php foreach ($ktgproduk as $t) { ?>
-							<li><a href="ktgproduk/<?php echo $t->slug; ?>"><?php echo $t->judul; ?></a></li>	
+							<li><a href="<?php echo base_url() ?>ktgproduk/<?php echo $t->slug; ?>"><?php echo $t->judul; ?></a></li>	
 							<?php } ?>
 						</ul>
 					</li>
-					<li class="portfolio"><a href="portfolio">Portfolio</a></li>
-					<li class="news"><a href="news">Berita</a></li>
-					<li class="kontak"><a href="kontak">Hubungi Kami</a></li>
+					<li class="portofolio"><a href="<?php echo base_url() ?>portofolio">Portfolio</a></li>
+					<li class="berita"><a href="<?php echo base_url() ?>berita">Berita</a></li>
+					<li class="kontak"><a href="<?php echo base_url() ?>kontak">Hubungi Kami</a></li>
 				</ul>
 			</nav><!-- End navigation -->
 		</div><!-- End container -->

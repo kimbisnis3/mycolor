@@ -15,7 +15,7 @@ $news2  	=  $this->db->order_by('id', 'DESC')->get_where('m_berita', array('akti
 $cl1  	=  $this->db->get_where('t_config_image', array('tipe' => 'cl'),6,0)->result();
 $cl2  	=  $this->db->get_where('t_config_image', array('tipe' => 'cl'),6,6)->result();
 
-$root_path_image = 'custompanel/';
+$root_path_image = $this->config->item('admin_page').'/';
 
  ?>
 <div class="slideshow">

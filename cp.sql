@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50626
 File Encoding         : 65001
 
-Date: 2019-03-22 20:37:27
+Date: 2019-03-23 17:03:23
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -60,17 +60,18 @@ CREATE TABLE `m_berita` (
   `image` text,
   `aktif` char(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of m_berita
 -- ----------------------------
-INSERT INTO `m_berita` VALUES ('1', '2019-03-16 13:48:52', '2019-03-16 13:48:52', null, null, null, 'aaa', null, '<p>aaa</p>\r\n', 'aaa', 'aaa', '/uploads/berita/aaa.png', '1');
-INSERT INTO `m_berita` VALUES ('2', '2019-03-16 13:48:52', '2019-03-16 13:48:52', null, null, null, 'aaa', null, '<p>aaa</p>\r\n', 'aaa', 'aaa', '/uploads/berita/aaa.png', '1');
-INSERT INTO `m_berita` VALUES ('3', '2019-03-16 13:48:52', '2019-03-16 13:48:52', null, null, null, 'aaa', null, '<p>aaa</p>\r\n', 'aaa', 'aaa', '/uploads/berita/aaa.png', '1');
-INSERT INTO `m_berita` VALUES ('4', '2019-03-22 19:13:38', '2019-03-22 19:13:38', null, null, null, 'bbb', null, '<p>aaa</p>\r\n', 'aaa', 'bbb', '/uploads/berita/aaa.png', '1');
-INSERT INTO `m_berita` VALUES ('5', '2019-03-22 19:13:39', '2019-03-22 19:13:39', null, null, null, 'bbb', null, '<p>aaa</p>\r\n', 'aaa', 'bbb', '/uploads/berita/aaa.png', '1');
-INSERT INTO `m_berita` VALUES ('6', '2019-03-22 19:13:40', '2019-03-22 19:13:40', null, null, null, 'bbb', null, '<p>aaa</p>\r\n', 'aaa', 'bbb', '/uploads/berita/aaa.png', '1');
+INSERT INTO `m_berita` VALUES ('1', '2019-03-23 13:44:48', '2019-03-23 13:44:48', null, null, null, 'aaa', null, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'aaa', '/uploads/berita/aaa.png', '1');
+INSERT INTO `m_berita` VALUES ('2', '2019-03-23 13:44:49', '2019-03-23 13:44:49', null, null, null, 'aaa', null, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'aaa', '/uploads/berita/aaa.png', '1');
+INSERT INTO `m_berita` VALUES ('3', '2019-03-23 13:44:53', '2019-03-23 13:44:53', null, null, null, 'aaa', null, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'aaa', '/uploads/berita/aaa.png', '1');
+INSERT INTO `m_berita` VALUES ('4', '2019-03-23 13:44:50', '2019-03-23 13:44:50', null, null, null, 'bbb', null, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'bbb', '/uploads/berita/aaa.png', '1');
+INSERT INTO `m_berita` VALUES ('5', '2019-03-23 13:44:51', '2019-03-23 13:44:51', null, null, null, 'bbb', null, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'bbb', '/uploads/berita/aaa.png', '1');
+INSERT INTO `m_berita` VALUES ('6', '2019-03-23 13:44:51', '2019-03-23 13:44:51', null, null, null, 'bbb', null, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'bbb', '/uploads/berita/aaa.png', '1');
+INSERT INTO `m_berita` VALUES ('7', '2019-03-23 13:44:52', '2019-03-23 13:44:52', null, null, null, 'bbb', null, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'bbb', '/uploads/berita/aaa.png', '1');
 
 -- ----------------------------
 -- Table structure for m_ktgportofolio
@@ -91,12 +92,31 @@ CREATE TABLE `m_ktgportofolio` (
   `image` text,
   `aktif` char(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of m_ktgportofolio
 -- ----------------------------
 INSERT INTO `m_ktgportofolio` VALUES ('3', '2019-03-16 18:48:04', null, null, null, null, 'Neon Box', null, '<p>neon-box</p>\r\n', 'nb', 'neon-box', '/uploads/ktgportofolio/neon-box.png', '1');
+INSERT INTO `m_ktgportofolio` VALUES ('4', '2019-03-23 14:46:57', '2019-03-23 15:33:06', 'x', null, null, 'Neon strip', null, '<p>Neon strip</p>\r\n', 'Neon strip', 'neon-strip', '/uploads/ktgportofolio/neon-strip.png', '1');
+INSERT INTO `m_ktgportofolio` VALUES ('5', '2019-03-16 18:48:04', null, null, null, null, 'Neon Box', null, '<p>neon-box</p>\r\n', 'nb', 'neon-box', '/uploads/ktgportofolio/neon-box.png', '1');
+INSERT INTO `m_ktgportofolio` VALUES ('6', '2019-03-23 14:46:57', '2019-03-23 15:33:30', 'x', null, null, 'Neon strip', null, '<p>Neon strip</p>\r\n', 'Neon strip', 'neon-strip', '/uploads/ktgportofolio/neon-strip.png', '1');
+INSERT INTO `m_ktgportofolio` VALUES ('7', '2019-03-16 18:48:04', null, null, null, null, 'Neon Box', null, '<p>neon-box</p>\r\n', 'nb', 'neon-box', '/uploads/ktgportofolio/neon-box.png', '1');
+INSERT INTO `m_ktgportofolio` VALUES ('8', '2019-03-23 14:46:57', '2019-03-23 15:33:06', 'x', null, null, 'Neon strip', null, '<p>Neon strip</p>\r\n', 'Neon strip', 'neon-strip', '/uploads/ktgportofolio/neon-strip.png', '1');
+INSERT INTO `m_ktgportofolio` VALUES ('9', '2019-03-16 18:48:04', null, null, null, null, 'Neon Box', null, '<p>neon-box</p>\r\n', 'nb', 'neon-box', '/uploads/ktgportofolio/neon-box.png', '1');
+INSERT INTO `m_ktgportofolio` VALUES ('10', '2019-03-23 14:46:57', '2019-03-23 15:33:30', 'x', null, null, 'Neon strip', null, '<p>Neon strip</p>\r\n', 'Neon strip', 'neon-strip', '/uploads/ktgportofolio/neon-strip.png', '1');
+INSERT INTO `m_ktgportofolio` VALUES ('11', '2019-03-16 18:48:04', null, null, null, null, 'Neon Box', null, '<p>neon-box</p>\r\n', 'nb', 'neon-box', '/uploads/ktgportofolio/neon-box.png', '1');
+INSERT INTO `m_ktgportofolio` VALUES ('12', '2019-03-23 14:46:57', '2019-03-23 15:33:06', 'x', null, null, 'Neon strip', null, '<p>Neon strip</p>\r\n', 'Neon strip', 'neon-strip', '/uploads/ktgportofolio/neon-strip.png', '1');
+INSERT INTO `m_ktgportofolio` VALUES ('13', '2019-03-16 18:48:04', null, null, null, null, 'Neon Box', null, '<p>neon-box</p>\r\n', 'nb', 'neon-box', '/uploads/ktgportofolio/neon-box.png', '1');
+INSERT INTO `m_ktgportofolio` VALUES ('14', '2019-03-23 14:46:57', '2019-03-23 15:33:30', 'x', null, null, 'Neon strip', null, '<p>Neon strip</p>\r\n', 'Neon strip', 'neon-strip', '/uploads/ktgportofolio/neon-strip.png', '1');
+INSERT INTO `m_ktgportofolio` VALUES ('15', '2019-03-16 18:48:04', null, null, null, null, 'Neon Box', null, '<p>neon-box</p>\r\n', 'nb', 'neon-box', '/uploads/ktgportofolio/neon-box.png', '1');
+INSERT INTO `m_ktgportofolio` VALUES ('16', '2019-03-23 14:46:57', '2019-03-23 15:33:06', 'x', null, null, 'Neon strip', null, '<p>Neon strip</p>\r\n', 'Neon strip', 'neon-strip', '/uploads/ktgportofolio/neon-strip.png', '1');
+INSERT INTO `m_ktgportofolio` VALUES ('17', '2019-03-16 18:48:04', null, null, null, null, 'Neon Box', null, '<p>neon-box</p>\r\n', 'nb', 'neon-box', '/uploads/ktgportofolio/neon-box.png', '1');
+INSERT INTO `m_ktgportofolio` VALUES ('18', '2019-03-23 14:46:57', '2019-03-23 15:33:30', 'x', null, null, 'Neon strip', null, '<p>Neon strip</p>\r\n', 'Neon strip', 'neon-strip', '/uploads/ktgportofolio/neon-strip.png', '1');
+INSERT INTO `m_ktgportofolio` VALUES ('19', '2019-03-16 18:48:04', null, null, null, null, 'Neon Box', null, '<p>neon-box</p>\r\n', 'nb', 'neon-box', '/uploads/ktgportofolio/neon-box.png', '1');
+INSERT INTO `m_ktgportofolio` VALUES ('20', '2019-03-23 14:46:57', '2019-03-23 15:33:06', 'x', null, null, 'Neon strip', null, '<p>Neon strip</p>\r\n', 'Neon strip', 'neon-strip', '/uploads/ktgportofolio/neon-strip.png', '1');
+INSERT INTO `m_ktgportofolio` VALUES ('21', '2019-03-16 18:48:04', null, null, null, null, 'Neon Box', null, '<p>neon-box</p>\r\n', 'nb', 'neon-box', '/uploads/ktgportofolio/neon-box.png', '1');
+INSERT INTO `m_ktgportofolio` VALUES ('22', '2019-03-23 14:46:57', '2019-03-23 15:33:30', 'x', null, null, 'Neon strip', null, '<p>Neon strip</p>\r\n', 'Neon strip', 'neon-strip', '/uploads/ktgportofolio/neon-strip.png', '1');
 
 -- ----------------------------
 -- Table structure for m_ktgproduk
@@ -152,11 +172,32 @@ CREATE TABLE `m_portofolio` (
   `image` text,
   `aktif` char(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of m_portofolio
 -- ----------------------------
+INSERT INTO `m_portofolio` VALUES ('1', '2019-03-23 13:44:48', '2019-03-23 16:37:37', null, null, null, '3', 'neon', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'aaa', 'aaa', '/uploads/berita/aaa.png', '1');
+INSERT INTO `m_portofolio` VALUES ('2', '2019-03-23 13:44:49', '2019-03-23 16:37:37', null, null, null, '3', 'neon', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'aaa', '2', '/uploads/berita/aaa.png', '1');
+INSERT INTO `m_portofolio` VALUES ('3', '2019-03-23 13:44:53', '2019-03-23 16:37:37', null, null, null, '3', 'neon', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'aaa', '3', '/uploads/berita/aaa.png', '1');
+INSERT INTO `m_portofolio` VALUES ('4', '2019-03-23 13:44:50', '2019-03-23 16:37:37', null, null, null, '3', 'neon', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'bbb', '4', '/uploads/berita/aaa.png', '1');
+INSERT INTO `m_portofolio` VALUES ('5', '2019-03-23 13:44:51', '2019-03-23 16:37:37', null, null, null, '3', 'neon', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'bbb', '5', '/uploads/berita/aaa.png', '1');
+INSERT INTO `m_portofolio` VALUES ('6', '2019-03-23 13:44:51', '2019-03-23 16:37:37', null, null, null, '3', 'neon', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'bbb', '6', '/uploads/berita/aaa.png', '1');
+INSERT INTO `m_portofolio` VALUES ('7', '2019-03-23 13:44:52', '2019-03-23 16:37:37', null, null, null, '3', 'neon', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'bbb', '7', '/uploads/berita/aaa.png', '1');
+INSERT INTO `m_portofolio` VALUES ('8', '2019-03-23 13:44:48', '2019-03-23 16:37:37', null, null, null, '3', 'neon', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'aaa', '8', '/uploads/berita/aaa.png', '1');
+INSERT INTO `m_portofolio` VALUES ('9', '2019-03-23 13:44:49', '2019-03-23 16:37:37', null, null, null, '3', 'neon', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'aaa', '9', '/uploads/berita/aaa.png', '1');
+INSERT INTO `m_portofolio` VALUES ('10', '2019-03-23 13:44:53', '2019-03-23 16:37:37', null, null, null, '3', 'neon', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'aaa', '10', '/uploads/berita/aaa.png', '1');
+INSERT INTO `m_portofolio` VALUES ('11', '2019-03-23 13:44:50', '2019-03-23 16:37:37', null, null, null, '3', 'neon', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'bbb', '11', '/uploads/berita/aaa.png', '1');
+INSERT INTO `m_portofolio` VALUES ('12', '2019-03-23 13:44:51', '2019-03-23 16:37:37', null, null, null, '3', 'neon', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'bbb', '12', '/uploads/berita/aaa.png', '1');
+INSERT INTO `m_portofolio` VALUES ('13', '2019-03-23 13:44:51', '2019-03-23 16:37:37', null, null, null, '4', 'neon', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'bbb', '13', '/uploads/berita/aaa.png', '1');
+INSERT INTO `m_portofolio` VALUES ('14', '2019-03-23 13:44:52', '2019-03-23 16:37:37', null, null, null, '4', 'neon', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'bbb', '14', '/uploads/berita/aaa.png', '1');
+INSERT INTO `m_portofolio` VALUES ('15', '2019-03-23 13:44:48', '2019-03-23 16:37:37', null, null, null, '4', 'neon', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'aaa', '15', '/uploads/berita/aaa.png', '1');
+INSERT INTO `m_portofolio` VALUES ('16', '2019-03-23 13:44:49', '2019-03-23 16:37:37', null, null, null, '4', 'neon', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'aaa', '16', '/uploads/berita/aaa.png', '1');
+INSERT INTO `m_portofolio` VALUES ('17', '2019-03-23 13:44:53', '2019-03-23 16:37:37', null, null, null, '4', 'neon', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'aaa', '17', '/uploads/berita/aaa.png', '1');
+INSERT INTO `m_portofolio` VALUES ('18', '2019-03-23 13:44:50', '2019-03-23 16:37:37', null, null, null, '4', 'neon', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'bbb', '18', '/uploads/berita/aaa.png', '1');
+INSERT INTO `m_portofolio` VALUES ('19', '2019-03-23 13:44:51', '2019-03-23 16:37:37', null, null, null, '5', 'neon', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'bbb', '19', '/uploads/berita/aaa.png', '1');
+INSERT INTO `m_portofolio` VALUES ('20', '2019-03-23 13:44:51', '2019-03-23 16:37:38', null, null, null, '5', 'neon', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'bbb', '20', '/uploads/berita/aaa.png', '1');
+INSERT INTO `m_portofolio` VALUES ('21', '2019-03-23 13:44:52', '2019-03-23 16:37:38', null, null, null, '5', 'neon', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, turpis.', 'bbb', '21', '/uploads/berita/aaa.png', '1');
 
 -- ----------------------------
 -- Table structure for m_produk
