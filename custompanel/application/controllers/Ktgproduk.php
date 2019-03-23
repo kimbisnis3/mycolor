@@ -22,7 +22,7 @@ class Ktgproduk extends CI_Controller {
     }
 
     public function setView(){
-        $result     = $this->Unimodel->getdata($this->table);
+        $result     = $this->db->order_by('tampildepan','desc')->get($this->table)->result();
         $list       = array();
         $no         = 1;
         foreach ($result as $r) {
@@ -31,16 +31,21 @@ class Ktgproduk extends CI_Controller {
             } else {
                 $gambar = "<img style='max-width : 30px;' src='.".$r->image."'>";
             }
+            if ($r->tampildepan == 1) {
+                $s = "<i class='glyphicon glyphicon-star'></i>";
+            } else {
+                $s = "";
+            }
             $row    = array(
                         "no"        => $no,
                         "kode"      => $r->kode,
-                        "judul"     => $r->judul,
+                        "judul"     => $r->judul." ".$s,
                         "subjudul"  => $r->subjudul,
                         "artikel"   => $r->artikel,
                         "image"     => $gambar,
                         "ket"       => $r->ket,
                         "aktif"     => aktif($r->aktif),
-                        "action"    => btnuda($r->id)
+                        "action"    => btnudax($r->id)
                         
             );
             $list[] = $row;
@@ -165,6 +170,20 @@ class Ktgproduk extends CI_Controller {
         $w['id'] = $this->input->post('id');
         $delete = $this->Unimodel->delete($this->table,$w);
         $r['sukses'] = ($delete > 0) ? 'success' : 'fail' ;
+        echo json_encode($r);
+    }
+
+    public function tampil()
+    {
+        $sql = "SELECT tampildepan FROM {$this->table} WHERE id = {$this->input->post('id')}";
+        $s = $this->db->query($sql)->row()->tampildepan;
+
+        $s == 1 ? $status = 0 : $status =1;
+
+        $d['tampildepan'] = $status;
+        $w['id'] = $this->input->post('id');   
+        $update = $this->Unimodel->update($this->table,$d,$w);
+        $r['sukses'] = ($update > 0) ? 'success' : 'fail' ;
         echo json_encode($r);
     }
 

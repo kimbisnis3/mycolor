@@ -70,7 +70,7 @@ $root_path_image = $this->config->item('admin_page').'/';
 				</div>
 			</div><!-- End row -->
 			<br><br>
-			<div class="load-more-projects"><a class="button-1" href="about">Sekilas Tentang Kami</a></div>
+			<div class="load-more-projects"><a class="button-1" href="<?php echo base_url() ?>about">Sekilas Tentang Kami</a></div>
 		</div><!-- End container -->
 	</div><!-- End sections -->
 	

@@ -14,6 +14,7 @@
 <script src="<?php echo base_url() ?>assets/js/jquery.themepunch.plugins.min.js"></script>
 <script src="<?php echo base_url() ?>assets/js/jquery.themepunch.revolution.min.js"></script>
 <script src="<?php echo base_url() ?>assets/js/custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-notify/0.2.0/js/bootstrap-notify.min.js"></script>
 <!-- End js -->
 <script type="text/javascript">
     $('.<?php echo $aktifmenu ?>').addClass('current_page_item');

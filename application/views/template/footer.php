@@ -45,12 +45,12 @@ $ig =  $this->db->get_where('t_config_text', array('tipe' => 'logo_ig'), 6)->row
             <div class="widget-title"><h6>Quick Links</h6></div>
             <div class="widget-posts">
               <ul>
-                <li><a href="home">Home</a></li>
-                <li><a href="about">Tentang Kami</a></li>
-                <li><a href="produk">Produk</a></li>
-                <li><a href="portofolio">Portfolio</a></li>
-                <li><a href="berita">Berita</a></li>
-                <li><a href="kontak">Hubungi Kami</a></li>
+                <li><a href="<?php echo base_url() ?>home">Home</a></li>
+                <li><a href="<?php echo base_url() ?>about">Tentang Kami</a></li>
+                <li><a href="<?php echo base_url() ?>produk">Produk</a></li>
+                <li><a href="<?php echo base_url() ?>portofolio">Portfolio</a></li>
+                <li><a href="<?php echo base_url() ?>berita">Berita</a></li>
+                <li><a href="<?php echo base_url() ?>kontak">Hubungi Kami</a></li>
               </ul>
             </div>
           </div>

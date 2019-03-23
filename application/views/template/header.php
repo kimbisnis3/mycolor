@@ -44,6 +44,8 @@ $logo =  $this->db->get_where('t_config_image', array('tipe' => 'logo'))->row();
 	
 	<!-- Favicons -->
 	<link rel="shortcut icon" href="<?php echo base_url() ?>assets/assets/images/favicon.png">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-notify/0.2.0/css/bootstrap-notify.min.css" />
   
 </head>
 <body>

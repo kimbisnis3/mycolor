@@ -44,6 +44,11 @@
           <i class="fa fa-file-text-o"></i> <span>Portofolio</span>
         </a>
       </li>
+      <li class="treeview kontak">
+        <a href="<?php echo site_url('kontak'); ?>">
+          <i class="fa fa-book"></i> <span>Kontak Kami</span>
+        </a>
+      </li>
       <li class="treeview user">
         <a href="<?php echo site_url('user'); ?>">
           <i class="fa fa-key"></i> <span>User</span>
