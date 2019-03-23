@@ -6,7 +6,7 @@ class Berita extends CI_Controller {
 	public $aktifmenu	= 'berita';
 	public $menu       	= 'berita';
 	public $mainpage	= 'berita/v_berita';
-	public $inpage		= '';
+	public $detpage		= 'berita/v_berita_det';
 
 function __construct(){
 	parent::__construct();
@@ -34,9 +34,18 @@ function __construct(){
 		$this->load->view('template/js');
     }
 
-    public function load_berita() {
-
-    }
+    public function detail($slug=null)
+	{
+		$data['countdata'] 	= $this->db->query("select * from m_berita where aktif = 1 and slug = '{$slug}'")->num_rows();
+		$data['maindata'] 	= $this->db->query("select * from m_berita where aktif = 1 and slug = '{$slug}'")->row();
+		$data['menu'] 		= $this->menu;
+		$data['aktifmenu'] 	= $this->aktifmenu;
+		if ($data['countdata'] > 0) {
+			$this->load->view($this->detpage,$data);
+		} else {
+			$this->load->view('template/datakosong');
+		}
+	}
 
 
 }

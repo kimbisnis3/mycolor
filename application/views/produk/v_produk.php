@@ -3,21 +3,21 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-					<h4>Portfolio</h4>
-					<span>Contoh portfolio yang pernah kami kerjakan</span>
+					<h4>Produk</h4>
+					<span>Contoh Produk dari Kami</span>
 				</div>
 				<div class="col-md-6">
-					<div class="crumbs">You are here: <a href="index.html">Home</a><span class="crumbs-span">&raquo;</span><span>Kategori Portfoilo</span></div>
+					<div class="crumbs">You are here: <a href="index.html">Home</a><span class="crumbs-span">&raquo;</span><span>Kategori Produk</span></div>
 				</div>
 			</div><!-- End row -->
 		</div><!-- End container -->
 	</div><!-- End breadcrumbs -->
 	
-	<div class="sections">
+	<div class="sections sections-left-sidebar">
 		<div class="container">
 			<div class="sections-title">
-				<div class="sections-title-h3"><h3>Kategori Portofolio</h3></div>
-				<p>Berikut Ini Adalah Daftar Kategori Portofolio.</p>
+				<div class="sections-title-h3"><h3>Kategori produk</h3></div>
+				<p>Berikut Ini Adalah Daftar Kategori produk.</p>
 			</div><!-- End sections-title -->
 			<div class="row">
 				<div class="col-md-12 main-content">

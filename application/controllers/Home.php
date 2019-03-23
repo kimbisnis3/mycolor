@@ -15,7 +15,8 @@ function __construct(){
 }
 	public function index()
 	{
-		$this->load->view($this->mainpage);
+		$data['aktifmenu'] = $this->aktifmenu;	
+		$this->load->view($this->mainpage,$data);
     }
     
     public function read($slug=null)

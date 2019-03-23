@@ -99,7 +99,7 @@ $root_path_image = $this->config->item('admin_page').'/';
 							<div class="portfolio-head">
 								<div class="portfolio-img"><img alt="" class="img-md" src="<?php echo $root_path_image?>.<?php echo $t->image ?>" style="height: 250px;"></div>
 								<div class="portfolio-hover">
-									<a class="portfolio-link" href="ktgproduk/<?php echo $t->slug ?>"><i class="fa fa-link"></i></a>
+									<a class="portfolio-link" href="produk/list_item/<?php echo $t->id ?>"><i class="fa fa-link"></i></a>
 									<a class="portfolio-zoom prettyPhoto" href="<?php echo $root_path_image?>.<?php echo $t->image ?>"><i class="fa fa-search"></i></a>
 								</div>
 							</div><!-- End portfolio-head -->
@@ -138,8 +138,8 @@ $root_path_image = $this->config->item('admin_page').'/';
 										<div class="blog-date"><span><?php echo date('d', strtotime($t->datei)); ?></span><span><?php echo date('M Y', strtotime($t->datei)); ?></span></div>
 									</div><!-- End blog-img -->
 									<div class="blog-content">
-										<h6><a href="single-blog.html"><?php echo $t->judul; ?></a></h6>
-										<p><?php echo $t->ket; ?> <a href="news/<?php echo $t->judul; ?>">Read More</a></p>
+										<h6><a href="<?php echo base_url() ?>berita/detail/<?php echo $t->slug; ?>"><?php echo $t->judul; ?></a></h6>
+										<p><?php echo $t->ket; ?> <a href="<?php echo base_url() ?>berita/detail/<?php echo $t->slug; ?>">Read More</a></p>
 									</div><!-- End blog-content -->
 									<div class="clearfix"></div>
 								</div><!-- End blog-item -->
@@ -155,8 +155,8 @@ $root_path_image = $this->config->item('admin_page').'/';
 										<div class="blog-date"><span><?php echo date('d', strtotime($t->datei)); ?></span><span><?php echo date('M Y', strtotime($t->datei)); ?></span></div>
 									</div><!-- End blog-img -->
 									<div class="blog-content">
-										<h6><a href="single-blog.html"><?php echo $t->judul; ?></a></h6>
-										<p><?php echo $t->ket; ?> <a href="news/<?php echo $t->judul; ?>">Read More</a></p>
+										<h6><a href="<?php echo base_url() ?>berita/detail/<?php echo $t->slug; ?>"><?php echo $t->judul; ?></a></h6>
+										<p><?php echo $t->ket; ?> <a href="<?php echo base_url() ?>berita/detail/<?php echo $t->slug; ?>">Read More</a></p>
 									</div><!-- End blog-content -->
 									<div class="clearfix"></div>
 								</div><!-- End blog-item -->

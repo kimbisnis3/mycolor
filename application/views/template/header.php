@@ -58,10 +58,10 @@ $logo =  $this->db->get_where('t_config_image', array('tipe' => 'logo'))->row();
 				<ul>
 					<li class="home"><a href="<?php echo base_url() ?>">Home</a></li>
 					<li class="about"><a href="<?php echo base_url() ?>about">Tentang Kami</a></li>
-					<li class="produk"><a href="#">Produk</a>
+					<li class="produk"><a href="<?php echo base_url() ?>produk">Produk</a>
 						<ul>
 							<?php foreach ($ktgproduk as $t) { ?>
-							<li><a href="<?php echo base_url() ?>ktgproduk/<?php echo $t->slug; ?>"><?php echo $t->judul; ?></a></li>	
+							<li><a href="<?php echo base_url() ?>produk/list_item/<?php echo $t->id; ?>"><?php echo $t->judul; ?></a></li>	
 							<?php } ?>
 						</ul>
 					</li>
