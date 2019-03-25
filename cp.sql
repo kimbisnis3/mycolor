@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50626
 File Encoding         : 65001
 
-Date: 2019-03-23 17:03:23
+Date: 2019-03-25 09:08:47
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -138,19 +138,17 @@ CREATE TABLE `m_ktgproduk` (
   `aktif` char(1) DEFAULT '1',
   `tampildepan` tinyint(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of m_ktgproduk
 -- ----------------------------
-INSERT INTO `m_ktgproduk` VALUES ('3', '2019-03-16 11:32:43', '2019-03-16 19:58:55', null, null, null, 'Neon Oke', null, '<p>xxxx</p>\r\n', 'xxxz', 'neon-oke', '/uploads/ktgproduk/neon-oke.png', '1', '1');
+INSERT INTO `m_ktgproduk` VALUES ('3', '2019-03-16 11:32:43', '2019-03-23 20:19:46', null, null, null, 'Neon Oke', null, '<p>xxxx</p>\r\n', 'xxxz', 'neon-oke', '/uploads/ktgproduk/neon-oke.png', '1', '1');
 INSERT INTO `m_ktgproduk` VALUES ('4', '2019-03-16 13:14:34', '2019-03-22 17:51:58', null, 'x', null, 'Neon Good', null, '', '', 'neon-good', '/uploads/ktgproduk/neon-good.png', '1', '1');
-INSERT INTO `m_ktgproduk` VALUES ('5', '2019-03-16 13:14:34', '2019-03-22 17:52:43', null, null, null, 'Neon Good', null, '', '', 'neon-good', '/uploads/ktgproduk/neon-good.png', '1', '1');
-INSERT INTO `m_ktgproduk` VALUES ('6', '2019-03-16 11:32:43', '2019-03-16 19:58:55', null, null, null, 'Neon Oke', null, '<p>xxxx</p>\r\n', 'xxxz', 'neon-oke', '/uploads/ktgproduk/neon-oke.png', '1', '1');
-INSERT INTO `m_ktgproduk` VALUES ('7', '2019-03-16 11:32:43', '2019-03-22 17:54:36', null, null, null, 'Neon Oke', null, '<p>xxxx</p>\r\n', 'xxxz', 'neon-oke', '/uploads/ktgproduk/neon-oke.png', '1', '0');
-INSERT INTO `m_ktgproduk` VALUES ('8', '2019-03-16 13:14:34', '2019-03-22 17:52:43', null, null, null, 'Neon Good', null, '', '', 'neon-good', '/uploads/ktgproduk/neon-good.png', '1', '1');
-INSERT INTO `m_ktgproduk` VALUES ('9', '2019-03-16 13:14:34', '2019-03-22 17:51:58', null, 'x', null, 'Neon Good', null, '', '', 'neon-good', '/uploads/ktgproduk/neon-good.png', '1', '1');
-INSERT INTO `m_ktgproduk` VALUES ('10', '2019-03-16 11:32:43', '2019-03-16 19:58:55', null, null, null, 'Neon Oke', null, '<p>xxxx</p>\r\n', 'xxxz', 'neon-oke', '/uploads/ktgproduk/neon-oke.png', '1', '1');
+INSERT INTO `m_ktgproduk` VALUES ('5', '2019-03-16 13:14:34', '2019-03-23 20:27:31', null, null, null, 'Neon Good', null, '', '', 'neon-good', '/uploads/ktgproduk/neon-good.png', '1', '1');
+INSERT INTO `m_ktgproduk` VALUES ('11', '2019-03-16 11:32:43', '2019-03-23 20:27:51', null, null, null, 'Neon Oke', null, '<p>xxxx</p>\r\n', 'xxxz', 'neon-oke', '/uploads/ktgproduk/neon-oke.png', '1', '1');
+INSERT INTO `m_ktgproduk` VALUES ('12', '2019-03-16 13:14:34', '2019-03-23 20:28:25', null, 'x', null, 'Neon Good', null, '', '', 'neon-good', '/uploads/ktgproduk/neon-good.png', '1', '0');
+INSERT INTO `m_ktgproduk` VALUES ('13', '2019-03-16 13:14:34', '2019-03-23 20:26:15', null, null, null, 'Neon Good', null, '', '', 'neon-good', '/uploads/ktgproduk/neon-good.png', '1', null);
 
 -- ----------------------------
 -- Table structure for m_portofolio
@@ -220,12 +218,17 @@ CREATE TABLE `m_produk` (
   `aktif` char(1) DEFAULT '1',
   `tampildepan` tinyint(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of m_produk
 -- ----------------------------
 INSERT INTO `m_produk` VALUES ('1', '2019-03-16 12:26:35', '2019-03-22 17:37:26', null, null, '3', null, 'xxxxx', 'xxx', '', '', 'xxxxx', '/uploads/produk/xxxxx.png', '1', '1');
+INSERT INTO `m_produk` VALUES ('2', '2019-03-16 12:26:35', '2019-03-23 19:00:23', null, null, '4', null, 'xxxxx', 'xxx', '', '', 'xxxxx', '/uploads/produk/xxxxx.png', '1', '1');
+INSERT INTO `m_produk` VALUES ('4', '2019-03-16 12:26:35', '2019-03-23 19:00:23', null, null, '4', null, 'xxxxx', 'xxx', '', '', 'xxxxx', '/uploads/produk/xxxxx.png', '1', '1');
+INSERT INTO `m_produk` VALUES ('5', '2019-03-16 12:26:35', '2019-03-23 19:00:29', null, null, '11', null, 'xxxxx', 'xxx', '', '', 'xxxxx', '/uploads/produk/xxxxx.png', '1', '1');
+INSERT INTO `m_produk` VALUES ('6', '2019-03-16 12:26:35', '2019-03-23 19:00:29', null, null, '11', null, 'xxxxx', 'xxx', '', '', 'xxxxx', '/uploads/produk/xxxxx.png', '1', '1');
+INSERT INTO `m_produk` VALUES ('7', '2019-03-16 12:26:35', '2019-03-23 19:00:13', null, null, '3', null, 'xxxxx', 'xxx', '', '', 'xxxxx', '/uploads/produk/xxxxx.png', '1', '1');
 
 -- ----------------------------
 -- Table structure for m_profil
@@ -277,9 +280,9 @@ CREATE TABLE `t_config_image` (
 -- ----------------------------
 -- Records of t_config_image
 -- ----------------------------
-INSERT INTO `t_config_image` VALUES ('2', '2019-03-16 15:06:40', '2019-03-22 17:18:14', null, null, null, 'asasda', 'asdas', '/uploads/slideshow/asasda.png', null, 'ss', '0', '3');
+INSERT INTO `t_config_image` VALUES ('2', '2019-03-16 15:06:40', '2019-03-23 19:13:44', null, null, null, 'asasda', 'asdas', '/uploads/slideshow/asasda.png', null, 'ss', '1', '3');
 INSERT INTO `t_config_image` VALUES ('3', '2019-03-22 10:51:07', '2019-03-22 16:59:38', 'x', null, null, 'Image', 'oke', '/uploads/slideshow/image.png', null, 'ss', '1', '3');
-INSERT INTO `t_config_image` VALUES ('4', '2019-03-22 10:51:16', '2019-03-22 16:59:39', 'x', null, null, 'image 2', '', '/uploads/slideshow/image-2.png', null, 'ss', '1', '3');
+INSERT INTO `t_config_image` VALUES ('4', '2019-03-22 10:51:16', '2019-03-23 18:46:37', 'x', null, null, 'image 2', '', '/uploads/slideshow/image-2.png', null, 'ss', '0', '3');
 INSERT INTO `t_config_image` VALUES ('5', '2019-03-22 10:57:51', '2019-03-22 17:25:55', null, 'x', null, 'Tentang Kamiz', 'aaaaaaaaaaaaaa', '/uploads/about/tentang-kamiz.png', null, 'tk', '1', '2');
 INSERT INTO `t_config_image` VALUES ('6', '2019-03-22 16:57:19', '2019-03-22 17:01:18', null, 'x', null, 'LOGO', 'LOGO', '/uploads/elementgambar/logo.png', null, 'logo', '1', '1');
 INSERT INTO `t_config_image` VALUES ('7', '2019-03-22 19:30:01', '2019-03-22 19:45:50', null, null, null, null, null, '/uploads/elementgambar/logo.png', 'xxx', 'cl', '1', '1');
@@ -368,9 +371,10 @@ CREATE TABLE `x_gb` (
   `pesan` text,
   `baca` char(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of x_gb
 -- ----------------------------
+INSERT INTO `x_gb` VALUES ('26', '2019-03-23 22:54:04', 'asdas', 'asda', 'asdas', 'dasdsaasd', null);
 SET FOREIGN_KEY_CHECKS=1;
