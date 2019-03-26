@@ -15,42 +15,42 @@
     <ul class="sidebar-menu">
       <li class="header">FRONT END WEBSITE</li>
       <li class="treeview berita">
-        <a href="<?php echo site_url('berita'); ?>">
+        <a href="<?php echo base_url('berita'); ?>">
           <i class="fa fa-newspaper-o"></i> <span>Berita</span>
         </a>
       </li>
       <li class="treeview about">
-        <a href="<?php echo site_url('about'); ?>">
+        <a href="<?php echo base_url('about'); ?>">
           <i class="fa fa-user"></i> <span>Tetang Kami</span>
         </a>
       </li>
       <li class="treeview ktgproduk">
-        <a href="<?php echo site_url('ktgproduk'); ?>">
+        <a href="<?php echo base_url('ktgproduk'); ?>">
           <i class="fa fa-link"></i> <span>Kategori Produk</span>
         </a>
       </li>
       <li class="treeview produk">
-        <a href="<?php echo site_url('produk'); ?>">
+        <a href="<?php echo base_url('produk'); ?>">
           <i class="fa fa-dropbox"></i> <span>Produk</span>
         </a>
       </li>
       <li class="treeview ktgportofolio">
-        <a href="<?php echo site_url('ktgportofolio'); ?>">
+        <a href="<?php echo base_url('ktgportofolio'); ?>">
           <i class="fa fa-link"></i> <span>Kategori Portofolio</span>
         </a>
       </li>
       <li class="treeview portofolio">
-        <a href="<?php echo site_url('portofolio'); ?>">
+        <a href="<?php echo base_url('portofolio'); ?>">
           <i class="fa fa-file-text-o"></i> <span>Portofolio</span>
         </a>
       </li>
       <li class="treeview kontak">
-        <a href="<?php echo site_url('kontak'); ?>">
+        <a href="<?php echo base_url('kontak'); ?>">
           <i class="fa fa-book"></i> <span>Kontak Kami</span>
         </a>
       </li>
       <li class="treeview user">
-        <a href="<?php echo site_url('user'); ?>">
+        <a href="<?php echo base_url('user'); ?>">
           <i class="fa fa-key"></i> <span>User</span>
         </a>
       </li>
