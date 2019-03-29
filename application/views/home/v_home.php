@@ -9,6 +9,8 @@ $teksprod =  $this->db->get_where('t_config_text', array('tipe' => 'teksprod'))-
 $tekspor  =  $this->db->get_where('t_config_text', array('tipe' => 'tekspor'))->row();
 
 $ktgproduk  =  $this->db->get_where('m_ktgproduk', array('tampildepan' => '1'),8)->result();
+$produk  	=  $this->db->get_where('m_produk', array('tampildepan' => '1'),8)->result();
+
 $news1  	=  $this->db->order_by('id', 'DESC')->get_where('m_berita', array('aktif' => '1'),3,0)->result();
 $news2  	=  $this->db->order_by('id', 'DESC')->get_where('m_berita', array('aktif' => '1'),3,3)->result();
 
@@ -93,20 +95,20 @@ $root_path_image = $this->config->item('admin_page').'/';
 			</div><!-- End row -->
 			<div class="row portfolio-all portfolio-0">
 				<ul>
-					<?php foreach ($ktgproduk as $t) { ?>
+					<?php foreach ($produk as $t) { ?>
 					<li class="col-md-3 term-design portfolio-item isotope-item">
 						<div class="portfolio-one">
 							<div class="portfolio-head">
 								<div class="portfolio-img"><img alt="" class="img-md" src="<?php echo $root_path_image?>.<?php echo $t->image ?>" style="height: 250px;"></div>
 								<div class="portfolio-hover">
-									<a class="portfolio-link" href="produk/list_item/<?php echo $t->id ?>"><i class="fa fa-link"></i></a>
+									<a class="portfolio-link" href="produk/detail/<?php echo $t->slug ?>"><i class="fa fa-link"></i></a>
 									<a class="portfolio-zoom prettyPhoto" href="<?php echo $root_path_image?>.<?php echo $t->image ?>"><i class="fa fa-search"></i></a>
 								</div>
 							</div><!-- End portfolio-head -->
 							<div class="portfolio-content">
 								<i class="fa fa-leaf"></i>
 								<div class="portfolio-meta">
-									<div class="portfolio-name"><h6><a href="ktgproduk/<?php echo $t->slug ?>"><?php echo $t->judul ?></a></h6></div>
+									<div class="portfolio-name"><h6><a href="produk/detail/<?php echo $t->slug ?>"><?php echo $t->judul ?></a></h6></div>
 									<!-- <div class="portfolio-cat"><a href="#"><?php echo $t->judul ?></a></div> -->
 								</div><!-- End portfolio-meta -->
 							</div><!-- End portfolio-content -->
@@ -115,7 +117,7 @@ $root_path_image = $this->config->item('admin_page').'/';
 					<?php } ?>
 				</ul>
 			</div><!-- End portfolio-0 -->
-			<div class="load-more-projects"><a class="button-1 button-2" href="ktgproduk">Lihat Produk Lainnya</a></div>
+			<div class="load-more-projects"><a class="button-1 button-2" href="<?php echo base_url()?>produk">Lihat Produk Lainnya</a></div>
 		</div><!-- End container -->
 	</div><!-- End sections -->
 	

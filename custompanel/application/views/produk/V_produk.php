@@ -31,7 +31,7 @@ $this->load->view('template/sidebar');
                   <input type="hidden" name="id">
                   <input type="text" class="form-control" name="judul">
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                   <label>Kategori</label>
                   <select class="form-control" name="ref_ktgproduk">
                     <option value=""></option>
@@ -41,7 +41,7 @@ $this->load->view('template/sidebar');
                     <option value="<?php echo $t->id ?>"><?php echo $t->judul ?></option>
                     <?php } ?>
                   </select>
-                </div>
+                </div> -->
                 <div class="form-group">
                   <label>Gambar</label>
                   <input type="file" class="form-control" name="image" id="image" >
@@ -102,7 +102,7 @@ $this->load->view('template/sidebar');
                   <tr id="repeat">
                     <th>No</th>
                     <th>Judul</th>
-                    <th>Kategori</th>
+                    <!-- <th>Kategori</th> -->
                     <th>Artikel</th>
                     <th>Image</th>
                     <th>Keterangan</th>
@@ -137,6 +137,7 @@ $this->load->view('template/sidebar');
   var urlhapus = "<?php echo site_url('')?>" + controller + '/hapus';
   var urlunduh = "<?php echo site_url('')?>" + controller + '/unduh';
   var urlaktif = "<?php echo site_url('')?>" + controller + '/aktif';
+  var urltampil = "<?php echo site_url('')?>" + controller + '/tampil';
 
   $(document).ready(function() {
       table = $('#table').DataTable({
@@ -152,9 +153,9 @@ $this->load->view('template/sidebar');
               {
                   "data": "judul"
               },
-              {
-                  "data": "kategori"
-              },
+              // {
+              //     "data": "kategori"
+              // },
               {
                   "data": "artikel"
               }, 
@@ -350,6 +351,31 @@ $this->load->view('template/sidebar');
                   showNotif('Gagal', 'Data Gagal Dihapus', 'danger')
               }
               refresh();
+          },
+          error: function(jqXHR, textStatus, errorThrown) {
+              alert('Error on process');
+          }
+      });
+  }
+
+  function tampil_data(id) {
+      $.ajax({
+          url: urltampil,
+          type: "POST",
+          dataType: "JSON",
+          data: {
+              id: id,
+          },
+          success: function(data) {
+              // $('#modal-konfirmasi').modal('hide');
+              if (data.sukses == 'success') {
+                  refresh();
+                  showNotif('Sukses', 'Data Berhasil Diubah', 'success')
+              } else if (data.sukses == 'fail') {
+                  // $('#modal-data').modal('hide');
+                  refresh();
+                  showNotif('Gagal', 'Data Gagal Diubah', 'danger')
+              }
           },
           error: function(jqXHR, textStatus, errorThrown) {
               alert('Error on process');

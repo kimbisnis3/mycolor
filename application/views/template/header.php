@@ -4,6 +4,7 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <?php 
 $ktgproduk =  $this->db->get_where('m_ktgproduk', array('aktif' => '1'), 6)->result();
+$produk =  $this->db->order_by('tampildepan', 'ASC')->get_where('m_produk', array('aktif' => '1','tampildepan' => '1'), 6)->result();
 $logo =  $this->db->get_where('t_config_image', array('tipe' => 'logo'))->row();
 
  ?>
@@ -43,9 +44,12 @@ $logo =  $this->db->get_where('t_config_image', array('tipe' => 'logo'))->row();
 	<link rel="stylesheet" href="<?php echo base_url() ?>assets/css/responsive.css">
 	
 	<!-- Favicons -->
-	<link rel="shortcut icon" href="<?php echo base_url() ?>assets/assets/images/favicon.png">
+	<link rel="shortcut icon" href="<?php echo base_url() ?>assets/images/favicon.png">
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-notify/0.2.0/css/bootstrap-notify.min.css" />
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
   
 </head>
 <body>
@@ -62,8 +66,8 @@ $logo =  $this->db->get_where('t_config_image', array('tipe' => 'logo'))->row();
 					<li class="about"><a href="<?php echo base_url() ?>about">Tentang Kami</a></li>
 					<li class="produk"><a href="<?php echo base_url() ?>produk">Produk</a>
 						<ul>
-							<?php foreach ($ktgproduk as $t) { ?>
-							<li><a href="<?php echo base_url() ?>produk/list_item/<?php echo $t->id; ?>"><?php echo $t->judul; ?></a></li>	
+							<?php foreach ($produk as $t) { ?>
+							<li><a href="<?php echo base_url() ?>produk/detail/<?php echo $t->slug; ?>"><?php echo $t->judul; ?></a></li>	
 							<?php } ?>
 						</ul>
 					</li>

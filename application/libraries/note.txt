@@ -1,3 +1,4 @@
 image slider 1600 x 532
 cek all page
-tambah parameter tampil depan(tombol)
+tambah parameter tampil depan(tombol) untuk produk
+ubah tapilan home ktg produk menjadi produk yg punya tampil depan

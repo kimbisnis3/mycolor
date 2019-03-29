@@ -16,8 +16,8 @@
 	<div class="sections sections-left-sidebar">
 		<div class="container">
 			<div class="sections-title">
-				<div class="sections-title-h3"><h3>Kategori produk</h3></div>
-				<p>Berikut Ini Adalah Daftar Kategori produk.</p>
+				<div class="sections-title-h3"><h3>Produk</h3></div>
+				<p>Berikut Ini Adalah Daftar Produk Dari Kami.</p>
 			</div><!-- End sections-title -->
 			<div class="row">
 				<div class="col-md-12 main-content">
@@ -31,11 +31,11 @@
 										<div class="portfolio-img"><img alt="" src="<?php echo base_url() ?>/<?php echo $this->config->item('admin_page') ?><?php echo $t->image ?>" style="height: 250px;"></div>
 										<div class="portfolio-hover">
 											<div class="portfolio-meta">
-												<div class="portfolio-name"><h6><a href="<?php echo $menu ?>/list_item/<?php echo $t->id ?>"><?php echo $t->judul ?></a></h6></div>
+												<div class="portfolio-name"><h6><a href="<?php echo $menu ?>/detail/<?php echo $t->slug ?>"><?php echo $t->judul ?></a></h6></div>
 												<div class="portfolio-desc"><p><?php echo $t->ket ?></p>
 												</div>
 											</div><!-- End portfolio-meta -->
-											<a class="portfolio-link" href="<?php echo $menu ?>/list_item/<?php echo $t->id ?>"><i class="fa fa-link"></i></a>
+											<a class="portfolio-link" href="<?php echo $menu ?>/detail/<?php echo $t->slug ?>"><i class="fa fa-link"></i></a>
 											<a class="portfolio-zoom prettyPhoto" href="<?php echo base_url() ?>/<?php echo $this->config->item('admin_page') ?><?php echo $t->image ?>"><i class="fa fa-search"></i></a>
 										</div>
 									</div><!-- End portfolio-head -->

@@ -7,7 +7,7 @@
 					<span>Contoh Produk dari Kami</span>
 				</div>
 				<div class="col-md-6">
-					<div class="crumbs">You are here: <a href="<?php echo base_url() ?>">Home</a><span class="crumbs-span">&raquo;</span><span><a href="<?php echo base_url() ?>produk">Kategori produk</a></span><span class="crumbs-span">&raquo;</span><span><a href="<?php echo base_url().''.$menu.'/list_item/'.$ktgproduk->id ?>"><?php echo $ktgproduk->judul ?></a></span>&raquo;<span> <?php echo $maindata->judul; ?></span></div>
+					<div class="crumbs">You are here: <a href="<?php echo base_url() ?>">Home</a><span class="crumbs-span">&raquo;</span><span><a href="<?php echo base_url() ?>produk">Produk</a></span><span class="crumbs-span">&raquo;</span>&raquo;<span> <?php echo $maindata->judul; ?></span></div>
 				</div>
 			</div><!-- End row -->
 		</div><!-- End container -->

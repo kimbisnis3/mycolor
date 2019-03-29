@@ -24,11 +24,11 @@
           <i class="fa fa-user"></i> <span>Tetang Kami</span>
         </a>
       </li>
-      <li class="treeview ktgproduk">
+      <!-- <li class="treeview ktgproduk">
         <a href="<?php echo base_url('ktgproduk'); ?>">
           <i class="fa fa-link"></i> <span>Kategori Produk</span>
         </a>
-      </li>
+      </li> -->
       <li class="treeview produk">
         <a href="<?php echo base_url('produk'); ?>">
           <i class="fa fa-dropbox"></i> <span>Produk</span>

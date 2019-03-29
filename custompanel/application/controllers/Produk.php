@@ -24,13 +24,10 @@ class Produk extends CI_Controller {
 
     public function setView(){
         $sql        = "SELECT
-                        m_produk.*,
-                        m_ktgproduk.judul AS kategori
+                        *
                     FROM
                         m_produk
-                    JOIN m_ktgproduk ON m_ktgproduk.id = m_produk.ref_ktgproduk
-                    WHERE
-                        m_ktgproduk.aktif = 1";
+                    ORDER BY tampildepan DESC";
         $result     = $this->Unimodel->que_all($sql);
         $list       = array();
         $no         = 1;
@@ -40,17 +37,23 @@ class Produk extends CI_Controller {
             } else {
                 $gambar = "<img style='max-width : 30px;' src='.".$r->image."'>";
             }
+            if ($r->tampildepan == 1) {
+                $s = "<i class='glyphicon glyphicon-star'></i>";
+            } else {
+                $s = "";
+            }
             $row    = array(
                         "no"        => $no,
                         "kode"      => $r->kode,
-                        "judul"     => $r->judul,
-                        "kategori"  => $r->kategori,
+                        "judul"     => $r->judul." ".$s,
+                        // "kategori"  => $r->kategori,
                         "subjudul"  => $r->subjudul,
                         "artikel"   => $r->artikel,
                         "image"     => $gambar,
                         "ket"       => $r->ket,
                         "aktif"     => aktif($r->aktif),
-                        "action"    => btnuda($r->id)
+                        "action"    => btnuda($r->id)."
+        <button type='button' class='btn btn-sm btn-".(($r->tampildepan == 1) ? 'danger' : 'primary')." btn-flat' data-placement='top' title='".(($r->tampildepan == 1) ? 'Hapus Unggulan' : 'Unggulan')."' onclick='tampil_data(".$r->id.")'><i class='glyphicon glyphicon-star'></i></button>"
                         
             );
             $list[] = $row;
@@ -157,6 +160,20 @@ class Produk extends CI_Controller {
         $w['id'] = $this->input->post('id');
         $delete = $this->Unimodel->delete($this->table,$w);
         $r['sukses'] = ($delete > 0) ? 'success' : 'fail' ;
+        echo json_encode($r);
+    }
+
+    public function tampil()
+    {
+        $sql = "SELECT tampildepan FROM {$this->table} WHERE id = {$this->input->post('id')}";
+        $s = $this->db->query($sql)->row()->tampildepan;
+
+        $s == 1 ? $status = 0 : $status =1;
+
+        $d['tampildepan'] = $status;
+        $w['id'] = $this->input->post('id');   
+        $update = $this->Unimodel->update($this->table,$d,$w);
+        $r['sukses'] = ($update > 0) ? 'success' : 'fail' ;
         echo json_encode($r);
     }
 

@@ -18,8 +18,8 @@ function __construct(){
 		$page 	= ($this->input->get('page') == '' || $this->input->get('page') == null) ? 1 : $this->input->get('page');
 		$limit 	= 16;
 		$offset = ($page - 1) * $limit;
-		$data['countdata'] 	= $this->db->query("select * from m_ktgproduk where aktif = 1 ")->num_rows();
-		$data['maindata'] 	= $this->db->query("select * from m_ktgproduk where aktif = 1 LIMIT {$limit} OFFSET {$offset}")->result();
+		$data['countdata'] 	= $this->db->query("select * from m_produk where aktif = 1 ")->num_rows();
+		$data['maindata'] 	= $this->db->query("select * from m_produk where aktif = 1 LIMIT {$limit} OFFSET {$offset}")->result();
 		$data['currentpage']= $page;
 		$data['limit'] 		= $limit;
 		$data['numofpage'] 	= ceil($data['countdata'] / $limit);
@@ -30,7 +30,8 @@ function __construct(){
 		} else {
 			$this->load->view('template/datakosong');
 		}
-    }
+		}
+		
 
     public function list_item($id=null)
 	{
@@ -56,7 +57,7 @@ function __construct(){
 	{
 		$data['countdata'] 	= $this->db->query("select * from m_produk where aktif = 1 and slug = '{$slug}'")->num_rows();
 		$data['maindata'] 	= $this->db->query("select * from m_produk where aktif = 1 and slug = '{$slug}'")->row();
-		$data['ktgproduk'] 	= $this->db->query("select * from m_ktgproduk where id = {$data['maindata']->ref_ktgproduk}")->row();
+		// $data['ktgproduk'] 	= $this->db->query("select * from m_ktgproduk where id = {$data['maindata']->ref_ktgproduk}")->row();
 		$data['menu'] 		= $this->menu;
 		$data['aktifmenu'] 	= $this->aktifmenu;
 		if ($data['countdata'] > 0) {
