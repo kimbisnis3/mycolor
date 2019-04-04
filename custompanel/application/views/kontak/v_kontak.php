@@ -82,7 +82,7 @@ $this->load->view('template/sidebar');
                     <th>Tanggal</th>
                     <th>Nama</th>
                     <th>Email</th>
-                    <th>Alamat</th>
+                    <!-- <th>Alamat</th> -->
                     <th>Pesan</th>
                     <th>Opsi</th>
                   </tr>
@@ -135,9 +135,9 @@ $this->load->view('template/sidebar');
               {
                   "data": "email"
               },
-              {
-                  "data": "alamat"
-              },  
+              // {
+              //     "data": "alamat"
+              // },  
               {
                   "data": "pesan"
               }, 

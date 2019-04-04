@@ -18,8 +18,14 @@ function __construct(){
 		$page 	= ($this->input->get('page') == '' || $this->input->get('page') == null) ? 1 : $this->input->get('page');
 		$limit 	= 16;
 		$offset = ($page - 1) * $limit;
-		$data['countdata'] 	= $this->db->query("select * from m_ktgportofolio where aktif = 1 ")->num_rows();
-		$data['maindata'] 	= $this->db->query("select * from m_ktgportofolio where aktif = 1 LIMIT {$limit} OFFSET {$offset}")->result();
+		$data['countdata'] 	= $this->db->query("select * from m_portofolio where aktif = 1 ")->num_rows();
+		$data['maindata'] 	= $this->db->query("select * from m_portofolio where aktif = 1 ")->result();
+		$data['ktgportofolio'] 	= $this->db->query("SELECT DISTINCT
+			m_ktgportofolio.judul, m_ktgportofolio.id
+		FROM
+			m_ktgportofolio
+		LEFT OUTER JOIN m_portofolio ON m_portofolio.ref_ktgportofolio = m_ktgportofolio.id
+		WHERE m_portofolio.aktif = 1")->result();
 		$data['currentpage']= $page;
 		$data['limit'] 		= $limit;
 		$data['numofpage'] 	= ceil($data['countdata'] / $limit);

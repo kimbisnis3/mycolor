@@ -31,7 +31,7 @@ class Kontak extends CI_Controller {
                         "datei"     => date('d M Y H:m', strtotime($r->datei)),
                         "nama"      => $r->nama,
                         "email"     => $r->email,
-                        "alamat"    => $r->alamat,
+                        // "alamat"    => $r->alamat,
                         "pesan"     => $r->pesan,
                         "action"    => btnd($r->id)
                         

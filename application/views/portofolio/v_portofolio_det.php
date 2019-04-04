@@ -7,7 +7,7 @@
 					<span>Contoh portfolio yang pernah kami kerjakan</span>
 				</div>
 				<div class="col-md-6">
-					<div class="crumbs">You are here: <a href="<?php echo base_url() ?>">Home</a><span class="crumbs-span">&raquo;</span><span><a href="<?php echo base_url() ?>portofolio">Kategori Portofolio</a></span><span class="crumbs-span">&raquo;</span><span><a href="<?php echo base_url().''.$menu.'/list_item/'.$ktgportofolio->id ?>"><?php echo $ktgportofolio->judul ?></a></span>&raquo;<span> <?php echo $maindata->judul; ?></span></div>
+					<div class="crumbs">You are here: <a href="<?php echo base_url() ?>">Home</a><span class="crumbs-span">&raquo;</span><span><a href="<?php echo base_url() ?>portofolio">Portofolio</a></span><span class="crumbs-span">&raquo;</span><span> <?php echo $maindata->judul; ?></span></div>
 				</div>
 			</div><!-- End row -->
 		</div><!-- End container -->

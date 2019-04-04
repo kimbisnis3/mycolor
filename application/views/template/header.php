@@ -65,11 +65,11 @@ $logo =  $this->db->get_where('t_config_image', array('tipe' => 'logo'))->row();
 					<li class="home"><a href="<?php echo base_url() ?>">Home</a></li>
 					<li class="about"><a href="<?php echo base_url() ?>about">Tentang Kami</a></li>
 					<li class="produk"><a href="<?php echo base_url() ?>produk">Produk</a>
-						<ul>
+						<!-- <ul>
 							<?php foreach ($produk as $t) { ?>
 							<li><a href="<?php echo base_url() ?>produk/detail/<?php echo $t->slug; ?>"><?php echo $t->judul; ?></a></li>	
 							<?php } ?>
-						</ul>
+						</ul> -->
 					</li>
 					<li class="portofolio"><a href="<?php echo base_url() ?>portofolio">Portfolio</a></li>
 					<li class="berita"><a href="<?php echo base_url() ?>berita">Berita</a></li>
