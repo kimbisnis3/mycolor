@@ -140,8 +140,8 @@ $root_path_image = $this->config->item('admin_page').'/';
 										<div class="blog-date"><span><?php echo date('d', strtotime($t->datei)); ?></span><span><?php echo date('M Y', strtotime($t->datei)); ?></span></div>
 									</div><!-- End blog-img -->
 									<div class="blog-content">
-										<h6><a href="<?php echo base_url() ?>berita/detail/<?php echo $t->slug; ?>"><?php echo $t->judul; ?></a></h6>
-										<p><?php echo $t->ket; ?> <a href="<?php echo base_url() ?>berita/detail/<?php echo $t->slug; ?>">Read More</a></p>
+										<h6><a href="<?php echo base_url() ?>promo/detail/<?php echo $t->slug; ?>"><?php echo $t->judul; ?></a></h6>
+										<p><?php echo $t->ket; ?> <a href="<?php echo base_url() ?>promo/detail/<?php echo $t->slug; ?>">Read More</a></p>
 									</div><!-- End blog-content -->
 									<div class="clearfix"></div>
 								</div><!-- End blog-item -->
@@ -157,8 +157,8 @@ $root_path_image = $this->config->item('admin_page').'/';
 										<div class="blog-date"><span><?php echo date('d', strtotime($t->datei)); ?></span><span><?php echo date('M Y', strtotime($t->datei)); ?></span></div>
 									</div><!-- End blog-img -->
 									<div class="blog-content">
-										<h6><a href="<?php echo base_url() ?>berita/detail/<?php echo $t->slug; ?>"><?php echo $t->judul; ?></a></h6>
-										<p><?php echo $t->ket; ?> <a href="<?php echo base_url() ?>berita/detail/<?php echo $t->slug; ?>">Read More</a></p>
+										<h6><a href="<?php echo base_url() ?>promo/detail/<?php echo $t->slug; ?>"><?php echo $t->judul; ?></a></h6>
+										<p><?php echo $t->ket; ?> <a href="<?php echo base_url() ?>promo/detail/<?php echo $t->slug; ?>">Read More</a></p>
 									</div><!-- End blog-content -->
 									<div class="clearfix"></div>
 								</div><!-- End blog-item -->

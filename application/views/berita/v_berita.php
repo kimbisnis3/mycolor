@@ -3,11 +3,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-					<h4>Berita</h4>
-					<span>Update berita terbaru </span>
+					<h4>Promo</h4>
+					<span>Update Promo terbaru </span>
 				</div>
 				<div class="col-md-6">
-					<div class="crumbs">You are here: <a href="index.html">Home</a><span class="crumbs-span">&raquo;</span><span>Berita</span></div>
+					<div class="crumbs">You are here: <a href="<?php echo base_url() ?>">Home</a><span class="crumbs-span">&raquo;</span><span>Promo</span></div>
 				</div>
 			</div><!-- End row -->
 		</div><!-- End container -->

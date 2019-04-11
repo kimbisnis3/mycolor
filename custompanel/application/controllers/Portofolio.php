@@ -30,7 +30,7 @@ class Portofolio extends CI_Controller {
                         m_portofolio
                     JOIN m_ktgportofolio ON m_ktgportofolio.id = m_portofolio.ref_ktgportofolio
                     WHERE
-                        m_ktgportofolio.aktif = 1";
+                        m_portofolio.aktif = 1";
         $result     = $this->Unimodel->que_all($sql);
         $list       = array();
         $no         = 1;

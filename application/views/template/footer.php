@@ -16,7 +16,7 @@ $wa =  $this->db->get_where('t_config_text', array('tipe' => 'logo_wa'), 6)->row
           <div class="footer-widget">
             <div class="widget-title"><h6><?php echo $tk->judul; ?></h6></div>
             <div class="widget-about">
-              <p><?php echo $tk->teks; ?></p>
+              <p><?php echo $tk->ket; ?></p>
             </div>
           </div>
         </div>

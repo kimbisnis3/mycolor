@@ -72,7 +72,7 @@ $logo =  $this->db->get_where('t_config_image', array('tipe' => 'logo'))->row();
 						</ul> -->
 					</li>
 					<li class="portofolio"><a href="<?php echo base_url() ?>portofolio">Portfolio</a></li>
-					<li class="berita"><a href="<?php echo base_url() ?>berita">Berita</a></li>
+					<li class="berita"><a href="<?php echo base_url() ?>promo">Promo</a></li>
 					<li class="kontak"><a href="<?php echo base_url() ?>kontak">Hubungi Kami</a></li>
 				</ul>
 			</nav><!-- End navigation -->
