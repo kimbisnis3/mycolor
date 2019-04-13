@@ -9,7 +9,7 @@ ol li {
 }blockquote, q {	quotes: none; }blockquote:before, blockquote:after,q:before, q:after {	content: '';	content: none; }table {	border-collapse: collapse;	border-spacing: 0; }p {	margin: 0 0 20px 0;
 	line-height: 22px;
 	font-size: 13px;
-	color: #acacac;
+	color: #212121;
 }
 /* Basic Styles  */html {	-webkit-text-size-adjust: none;}* {	outline: none;}input[type='submit'] {   -webkit-appearance: none;   -moz-appearance: none;   appearance: none;     cursor: pointer;
    -moz-border-radius: 2px;

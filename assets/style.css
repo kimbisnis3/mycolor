@@ -57,7 +57,7 @@
 /* 01 - General & Basic Styles */
 body {
 	background-color: #FFF;
-	color: #acacac;
+	color: #212121;
 	-webkit-font-smoothing: antialiased;
 	overflow-x: hidden;
 }
@@ -793,7 +793,7 @@ input,textarea {
 	content: "";
 	height: 1px;
 	width: 270px;
-	background-color: #acacac;
+	background-color: #212121;
 	display: inline-block;
 	position: absolute;
 	bottom: 0;

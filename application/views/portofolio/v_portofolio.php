@@ -26,7 +26,7 @@
 							<ul>
 								<li class="current"><a data-filter="*" href="#">ALL</a></li>
 								<?php foreach ($ktgportofolio as $t) { ?>
-								<li><a data-filter=".term-<?php echo $t->id ?>" href="#"><?php echo $t->judul ?> - <?php echo $t->id ?></a></li>
+								<li><a data-filter=".term-<?php echo $t->id ?>" href="#"><?php echo $t->judul ?></a></li>
 								<?php } ?>
 							</ul>
 						</div>

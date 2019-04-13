@@ -63,7 +63,7 @@
 							<div class="section-title section-title-2 section-title-3"><h6>Alamat & Kontak :</h6></div>
 							<div class="contact-information">
 								<ul>
-									<li>Jalan Merak Raya Blok C No.28, Dusun I, Langenharjo, Grogol, Kabupaten Sukoharjo, Jawa Tengah 57552.</li>
+									<li style="color : #212121 !important;">Jalan Merak Raya Blok C No.28, Dusun I, Langenharjo, Grogol, Kabupaten Sukoharjo, Jawa Tengah 57552.</li>
 									<li>(0271) 9221000</li>
 									<li>info@mycolour.com</li>
 								</ul>
