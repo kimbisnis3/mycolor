@@ -63,7 +63,6 @@ $wa =  $this->db->get_where('t_config_text', array('tipe' => 'logo_wa'), 6)->row
             <div class="widget-about">
               <div class="social-ul">
                 <ul>
-                  <!-- <li class="social-facebook"><a href="<?php echo prep_url($fb->teks); ?>"><i class="fab fa-facebook"></i></a></li> -->
                   <li class="social-whatsapp"><a href="<?php echo prep_url($tp->teks); ?>"><i class="fas fa-shopping-cart"></i></a></li>
                   <li class="social-instagram"><a href="<?php echo prep_url($ig->teks); ?>"><i class="fab fa-instagram"></i></a></li>
                   <li class="social-whatsapp"><a href="<?php echo prep_url($wa->teks); ?>"><i class="fab fa-whatsapp"></i></a></li>

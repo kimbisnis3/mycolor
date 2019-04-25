@@ -9,20 +9,7 @@ $logo =  $this->db->get_where('t_config_image', array('tipe' => 'logo'))->row();
 
  ?>
 
-<style type="text/css">
-	.img-md {
-		max-width: 100%;
-    	max-height: 100%;
-	}
-	.img-news {
-		width: 100%;
-    	max-height: 150px;
-	}
-	.page_active {
-		background-color: #dd0000 !important;
-		color: #fff !important;
-	}
-</style>
+
 <head>
 
 	<!-- Basic Page Needs -->
@@ -50,8 +37,68 @@ $logo =  $this->db->get_where('t_config_image', array('tipe' => 'logo'))->row();
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
+	<link rel="stylesheet" href="<?php echo base_url() ?>assets/slick/slick.css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>assets/slick/slick-theme.css">
+
+
   
 </head>
+<style type="text/css">
+	.img-md {
+		max-width: 100%;
+    	max-height: 100%;
+	}
+	.img-news {
+		width: 100%;
+    	max-height: 150px;
+	}
+	.page_active {
+		background-color: #dd0000 !important;
+		color: #fff !important;
+	}
+	.slick-ss {
+	  display: block;
+	  margin: 0 auto;
+	  position: relative;
+	  width: 100%;
+	}
+	.imgss {
+		min-width: 100%;
+		height: 500px;
+	}
+	.slick-prev {
+		display: block;
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		left: 5px;
+		bottom: 50%;
+		z-index: 9999;
+		border: none;
+		background-color: #DD0000;
+		color: white;
+		opacity: 1;
+		transition: all 0.3s ease 0s;
+	}
+	.slick-next {
+		display: block;
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		right: 5px;
+		bottom: 50%;
+		z-index: 9999;
+		border: none;
+		background-color: #DD0000;
+		color: white;
+		opacity: 1;
+		transition: all 0.3s ease 0s;
+	}
+	.slick-next:hover,.slick-prev:hover {
+		opacity: 1;
+	}
+	
+</style>
 <body>
 
 <div class="loader"><div class="loader_html"></div></div>

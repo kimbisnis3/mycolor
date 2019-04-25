@@ -20,25 +20,13 @@ $cl2  	=  $this->db->get_where('t_config_image', array('tipe' => 'cl'),6,6)->res
 $root_path_image = $this->config->item('admin_page').'/';
 
  ?>
-<div class="slideshow">
-		<div class="tp-banner-container">
-			<div class="tp-banner">
-				<ul>
-					<?php foreach ( $ss as $t ) { ?>
-					<li data-transition="random" data-slotamount="7" data-masterspeed="500">
-						<!-- MAIN IMAGE -->
-						<img src="<?php echo $root_path_image?>.<?php echo $t->image ?>" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
-						
-						<div class="slideshow-bg"
-						data-y="310"
-						data-x="center"
-						data-start="0"></div>
-					</li>
-					<?php } ?>
-				</ul>
-			</div>
-		</div><!-- End tp-banner-container -->
-	</div><!-- End slideshow -->
+	
+
+	<div class="slick-ss">
+		<?php foreach ( $ss as $t ) { ?>
+		<div><img src="<?php echo $root_path_image?>.<?php echo $t->image ?>" class="imgss"></div>
+		<?php } ?>
+	</div>
 	
 	<div class="sections">
 		<div class="container">
