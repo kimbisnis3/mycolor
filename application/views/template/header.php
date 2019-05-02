@@ -66,6 +66,12 @@ $logo =  $this->db->get_where('t_config_image', array('tipe' => 'logo'))->row();
 		min-width: 100%;
 		height: 500px;
 	}
+	@media only screen and (max-width: 800px) {
+	  .imgss {
+	    min-width: 100%;
+		height: 200px;
+	  }
+	}
 	.slick-prev {
 		display: block;
 		width: 50px;
